@@ -1,0 +1,19 @@
+# --- 秘密：TDX 金鑰等，絕對不要進版控 ---
+.env
+*.key
+secrets.*
+
+# --- 原始與中繼資料：可重新下載/重建，且尊重資料來源規範，不入庫 ---
+data/raw/
+data/processed/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
