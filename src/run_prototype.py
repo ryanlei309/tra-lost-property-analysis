@@ -28,6 +28,12 @@ def main():
     analyze.fig_category(fact_lost)
     analyze.fig_reverse_logistics(fact_lost)
 
+    # 站址 -> 站名 對照（給流向圖判斷保管站）
+    import json
+    addr2name = {"".join(s["stationAddrTw"].split()): s["stationName"]
+                 for s in json.load(open(config.STATION_JSON, encoding="utf-8"))}
+    analyze.fig_channel_flow(fact_lost, addr2name)
+
     # 存乾淨資料表（之後可餵給 Tableau）
     fact_lost.to_csv(config.PROCESSED / "fact_lost.csv", index=False, encoding="utf-8-sig")
     agg.to_csv(config.PROCESSED / "agg_station.csv", index=False, encoding="utf-8-sig")

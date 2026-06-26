@@ -22,3 +22,6 @@ RIDERSHIP_CSV = {
 # 人流分母只取這個共同視窗（見 build_tables.py）。
 ANALYSIS_START = "2022-01-01"
 ANALYSIS_END = "2023-07-17"
+
+# 離群分析最低件數門檻：實測 ≥10 件結論即穩定，取 20 更保守。
+MIN_LOSS_COUNT = 20

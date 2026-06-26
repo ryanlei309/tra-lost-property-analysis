@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 
 from . import config
-from .categorize import classify
+from .categorize import classify, group_of
 
 # 從 pickupLocation 解析的兩種格式
 _STATION_RE = re.compile(r"車站:\s*(\d+)-(.+)")
@@ -38,6 +38,7 @@ def load_fact_lost() -> pd.DataFrame:
             "pickup_dt": _text(r, "pickupDate"),
             "property_name": name,
             "category": cat,
+            "category_group": group_of(cat),
             "value_tier": tier,
             "recoverable": recover,
             "channel": channel,           # 車站 / 車次 / 未知
