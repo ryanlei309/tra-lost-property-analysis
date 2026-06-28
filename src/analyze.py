@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 
 from . import config
 
-plt.rcParams["font.sans-serif"] = ["Noto Sans CJK TC", "Noto Sans CJK HK", "Noto Sans CJK JP"]
-plt.rcParams["axes.unicode_minus"] = False
+from .plotstyle import set_cjk_font
+set_cjk_font()
 
 
 def loss_rate_outliers(agg: pd.DataFrame, min_count: int = None) -> pd.DataFrame:
@@ -70,10 +70,15 @@ def fig_category(fact_lost: pd.DataFrame):
     plt.close(fig)
 
 
-def fig_reverse_logistics(fact_lost: pd.DataFrame):
-    keep = fact_lost["keep_addr"].replace("", np.nan).dropna().value_counts().head(8)
-    # 取地址前段當標籤
-    labels = [a[:11] + "…" if len(a) > 11 else a for a in keep.index]
+def fig_reverse_logistics(fact_lost: pd.DataFrame, addr2name: dict = None):
+    if addr2name:
+        names = (fact_lost["keep_addr"].map(lambda a: addr2name.get("".join(str(a).split())))
+                 .dropna().value_counts().head(8))
+        labels = [f"{n}站" for n in names.index]
+    else:
+        names = fact_lost["keep_addr"].replace("", np.nan).dropna().value_counts().head(8)
+        labels = [a[:11] + "…" if len(a) > 11 else a for a in names.index]
+    keep = names
     fig, ax = plt.subplots(figsize=(9, 5))
     ax.barh(range(len(keep)), keep.values, color="#534AB7")
     ax.set_yticks(range(len(keep))); ax.set_yticklabels(labels, fontsize=9)

@@ -18,7 +18,18 @@ def load_dim_station() -> pd.DataFrame:
     df["lat"] = pd.to_numeric(gps[0], errors="coerce")
     df["lon"] = pd.to_numeric(gps[1], errors="coerce")
     df["city"] = df["stationAddrTw"].str.extract(r"^(.{2,3}[縣市])")
-    out = df[["sta_code", "stationName", "stationEName", "lat", "lon", "city"]].rename(
+    _NORTH = ["臺北市", "新北市", "基隆市", "桃園市", "新竹市", "新竹縣", "宜蘭縣"]
+    _CENTRAL = ["苗栗縣", "臺中市", "彰化縣", "南投縣", "雲林縣"]
+    _SOUTH = ["嘉義市", "嘉義縣", "臺南市", "高雄市", "屏東縣"]
+    _EAST = ["花蓮縣", "臺東縣"]
+    def _region(c):
+        if c in _NORTH: return "北"
+        if c in _CENTRAL: return "中"
+        if c in _SOUTH: return "南"
+        if c in _EAST: return "東"
+        return "其他"
+    df["region"] = df["city"].map(_region)
+    out = df[["sta_code", "stationName", "stationEName", "lat", "lon", "city", "region"]].rename(
         columns={"stationName": "sta_name", "stationEName": "sta_ename"})
     print(f"[dim_station] {len(out)} 站，含 GPS {out['lat'].notna().sum()} 站")
     return out

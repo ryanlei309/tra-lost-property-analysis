@@ -3,6 +3,7 @@
 每一列 = 一件遺失物，帶上衍生欄位：品類、價值層級、可追回、遺失管道、站碼/車次。
 """
 import re
+import json
 import xml.etree.ElementTree as ET
 import pandas as pd
 
@@ -12,6 +13,14 @@ from .categorize import classify, group_of
 # 從 pickupLocation 解析的兩種格式
 _STATION_RE = re.compile(r"車站:\s*(\d+)-(.+)")
 _TRAIN_RE = re.compile(r"車次:\s*(\S+)")
+
+
+def _keep_addr_to_name():
+    """保管站地址 -> 站名（用車站基本資料的地址比對，去空白）。"""
+    m = {}
+    for s in json.load(open(config.STATION_JSON, encoding="utf-8")):
+        m["".join(s["stationAddrTw"].split())] = s["stationName"]
+    return m
 
 
 def _text(row, tag):
@@ -52,6 +61,11 @@ def load_fact_lost() -> pd.DataFrame:
     df["pickup_dt"] = pd.to_datetime(df["pickup_dt"], errors="coerce")
     df["pickup_date"] = df["pickup_dt"].dt.date
     df["year"] = df["pickup_dt"].dt.year
+
+    # 保管站名（給 Tableau 做「保管站 → 站內/車上」連動用）
+    addr2name = _keep_addr_to_name()
+    df["keep_sta_name"] = df["keep_addr"].map(
+        lambda a: addr2name.get("".join(str(a).split())))
 
     # 清掉解析不出日期、以及 2022 年以前的零星雜訊列（2002/2019/2020）
     before = len(df)

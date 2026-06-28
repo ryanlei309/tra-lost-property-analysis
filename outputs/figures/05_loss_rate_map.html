@@ -1,0 +1,3298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9174edf25a6829701d3a52fc60e17922 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9174edf25a6829701d3a52fc60e17922" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9174edf25a6829701d3a52fc60e17922 = L.map(
+                "map_9174edf25a6829701d3a52fc60e17922",
+                {
+                    center: [23.7, 121.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ec19e62e726ddd8499f9b47c40a05039 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ec19e62e726ddd8499f9b47c40a05039.addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+            var circle_marker_d9db4cbfdf98a7c6c981aa7d702d4ac4 = L.circleMarker(
+                [22.68754, 120.30678],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35.65352878971238, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_14ac2e54db816ac27588bd3301dc6f81 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a74141d014450035a10c8512eff1c269 = $(`<div id="html_a74141d014450035a10c8512eff1c269" style="width: 100.0%; height: 100.0%;"><b>新左營站</b><br>遺失件數：936<br>遺失率：8.5 /十萬人次<br>高價值佔比：31%</div>`)[0];
+                popup_14ac2e54db816ac27588bd3301dc6f81.setContent(html_a74141d014450035a10c8512eff1c269);
+            
+        
+
+        circle_marker_d9db4cbfdf98a7c6c981aa7d702d4ac4.bindPopup(popup_14ac2e54db816ac27588bd3301dc6f81)
+        ;
+
+        
+    
+    
+            var circle_marker_7600f015a84c9d72c623db704b3f08a3 = L.circleMarker(
+                [24.98942, 121.31384],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.87141615446466, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_4501dc0078d00e748c307ee099187e2b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_15835d1752f5e56906a5132cbe202783 = $(`<div id="html_15835d1752f5e56906a5132cbe202783" style="width: 100.0%; height: 100.0%;"><b>桃園站</b><br>遺失件數：893<br>遺失率：3.5 /十萬人次<br>高價值佔比：52%</div>`)[0];
+                popup_4501dc0078d00e748c307ee099187e2b.setContent(html_15835d1752f5e56906a5132cbe202783);
+            
+        
+
+        circle_marker_7600f015a84c9d72c623db704b3f08a3.bindPopup(popup_4501dc0078d00e748c307ee099187e2b)
+        ;
+
+        
+    
+    
+            var circle_marker_0bd606851962913ff1273e941740bcda = L.circleMarker(
+                [25.01401, 121.46406],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.577525251447256, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_04ac899ac5e9e5ea792fcb17d1dd58b2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_65f94379ba8e6c996d67d3b7cfa18f71 = $(`<div id="html_65f94379ba8e6c996d67d3b7cfa18f71" style="width: 100.0%; height: 100.0%;"><b>板橋站</b><br>遺失件數：723<br>遺失率：3.3 /十萬人次<br>高價值佔比：49%</div>`)[0];
+                popup_04ac899ac5e9e5ea792fcb17d1dd58b2.setContent(html_65f94379ba8e6c996d67d3b7cfa18f71);
+            
+        
+
+        circle_marker_0bd606851962913ff1273e941740bcda.bindPopup(popup_04ac899ac5e9e5ea792fcb17d1dd58b2)
+        ;
+
+        
+    
+    
+            var circle_marker_cf7d7f491dfe110ab6ec4edd03550f24 = L.circleMarker(
+                [24.99121, 121.42481],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.65357119794838, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_06309c8b23ed3915db53126bb3e5906c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_36a03140d67981abed29058b220e77c5 = $(`<div id="html_36a03140d67981abed29058b220e77c5" style="width: 100.0%; height: 100.0%;"><b>樹林站</b><br>遺失件數：632<br>遺失率：4.7 /十萬人次<br>高價值佔比：23%</div>`)[0];
+                popup_06309c8b23ed3915db53126bb3e5906c.setContent(html_36a03140d67981abed29058b220e77c5);
+            
+        
+
+        circle_marker_cf7d7f491dfe110ab6ec4edd03550f24.bindPopup(popup_06309c8b23ed3915db53126bb3e5906c)
+        ;
+
+        
+    
+    
+            var circle_marker_4210fcaf6d1f0743f2548ed5eca3148b = L.circleMarker(
+                [24.95369, 121.22556],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.514309710435047, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_a9974e18d9cd2ff0c8f95d31875d14dc = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b5f2ff10955e076d6d3ad46eb015b8cc = $(`<div id="html_b5f2ff10955e076d6d3ad46eb015b8cc" style="width: 100.0%; height: 100.0%;"><b>中壢站</b><br>遺失件數：538<br>遺失率：2.4 /十萬人次<br>高價值佔比：30%</div>`)[0];
+                popup_a9974e18d9cd2ff0c8f95d31875d14dc.setContent(html_b5f2ff10955e076d6d3ad46eb015b8cc);
+            
+        
+
+        circle_marker_4210fcaf6d1f0743f2548ed5eca3148b.bindPopup(popup_a9974e18d9cd2ff0c8f95d31875d14dc)
+        ;
+
+        
+    
+    
+            var circle_marker_10ab838134efe7a36e43b75a07b5d3fa = L.circleMarker(
+                [24.80157, 120.97157],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.47345500741569, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_fbe3fad12255f81361a9cc7e42effe55 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3c94b9be6e062cf51e418e43b8e8df2a = $(`<div id="html_3c94b9be6e062cf51e418e43b8e8df2a" style="width: 100.0%; height: 100.0%;"><b>新竹站</b><br>遺失件數：495<br>遺失率：2.7 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_fbe3fad12255f81361a9cc7e42effe55.setContent(html_3c94b9be6e062cf51e418e43b8e8df2a);
+            
+        
+
+        circle_marker_10ab838134efe7a36e43b75a07b5d3fa.bindPopup(popup_fbe3fad12255f81361a9cc7e42effe55)
+        ;
+
+        
+    
+    
+            var circle_marker_69d6989c02359a1b018d9cd938aff1aa = L.circleMarker(
+                [22.63145, 120.35745],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.130309983528402, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_d2d18f05bbd9571f197274c4dc4cbd43 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1dd2f819f201ad5c895e0004b6087b79 = $(`<div id="html_1dd2f819f201ad5c895e0004b6087b79" style="width: 100.0%; height: 100.0%;"><b>鳳山站</b><br>遺失件數：369<br>遺失率：7.5 /十萬人次<br>高價值佔比：24%</div>`)[0];
+                popup_d2d18f05bbd9571f197274c4dc4cbd43.setContent(html_1dd2f819f201ad5c895e0004b6087b79);
+            
+        
+
+        circle_marker_69d6989c02359a1b018d9cd938aff1aa.bindPopup(popup_d2d18f05bbd9571f197274c4dc4cbd43)
+        ;
+
+        
+    
+    
+            var circle_marker_a2b47faea36ef06fe2487271b14fc80c = L.circleMarker(
+                [23.95947, 120.56977],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.900000000000002, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_69c1bce7be2eb1c5d6da9321e0dcce58 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f95a17ac0a5a64e17463cd34d5ed22e2 = $(`<div id="html_f95a17ac0a5a64e17463cd34d5ed22e2" style="width: 100.0%; height: 100.0%;"><b>員林站</b><br>遺失件數：361<br>遺失率：5.2 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_69c1bce7be2eb1c5d6da9321e0dcce58.setContent(html_f95a17ac0a5a64e17463cd34d5ed22e2);
+            
+        
+
+        circle_marker_a2b47faea36ef06fe2487271b14fc80c.bindPopup(popup_69c1bce7be2eb1c5d6da9321e0dcce58)
+        ;
+
+        
+    
+    
+            var circle_marker_9d33404fe336f4002f75ed3db1d6aea3 = L.circleMarker(
+                [24.75462, 121.75791],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.31563667161046, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_845a12ec5f9040c14767868d62e8f750 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_78c3ff230db329c3c47ac74ac4189851 = $(`<div id="html_78c3ff230db329c3c47ac74ac4189851" style="width: 100.0%; height: 100.0%;"><b>宜蘭站</b><br>遺失件數：220<br>遺失率：5.5 /十萬人次<br>高價值佔比：30%</div>`)[0];
+                popup_845a12ec5f9040c14767868d62e8f750.setContent(html_78c3ff230db329c3c47ac74ac4189851);
+            
+        
+
+        circle_marker_9d33404fe336f4002f75ed3db1d6aea3.bindPopup(popup_845a12ec5f9040c14767868d62e8f750)
+        ;
+
+        
+    
+    
+            var circle_marker_29bdcab81fb65b48e536ecc7a81f4abe = L.circleMarker(
+                [24.10937, 120.61421],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.978422950967346, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f3df0a1c9427583e0a043912a5fc6041 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3dbe43866690884a623b09104d590156 = $(`<div id="html_3dbe43866690884a623b09104d590156" style="width: 100.0%; height: 100.0%;"><b>新烏日站</b><br>遺失件數：211<br>遺失率：3.3 /十萬人次<br>高價值佔比：29%</div>`)[0];
+                popup_f3df0a1c9427583e0a043912a5fc6041.setContent(html_3dbe43866690884a623b09104d590156);
+            
+        
+
+        circle_marker_29bdcab81fb65b48e536ecc7a81f4abe.bindPopup(popup_f3df0a1c9427583e0a043912a5fc6041)
+        ;
+
+        
+    
+    
+            var circle_marker_1207117c35718b3e25259961fa343116 = L.circleMarker(
+                [25.05348, 121.60706],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.122499793354272, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_4f71f823c598388a0ba3236c55c3aa34 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_50d076bf061aa39d7f1cdf05bba6bc87 = $(`<div id="html_50d076bf061aa39d7f1cdf05bba6bc87" style="width: 100.0%; height: 100.0%;"><b>南港站</b><br>遺失件數：189<br>遺失率：1.6 /十萬人次<br>高價值佔比：30%</div>`)[0];
+                popup_4f71f823c598388a0ba3236c55c3aa34.setContent(html_50d076bf061aa39d7f1cdf05bba6bc87);
+            
+        
+
+        circle_marker_1207117c35718b3e25259961fa343116.bindPopup(popup_4f71f823c598388a0ba3236c55c3aa34)
+        ;
+
+        
+    
+    
+            var circle_marker_472b626ef1ef5d245431dba05aef3bfa = L.circleMarker(
+                [23.30673, 120.32307],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.798986451781083, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_0487d4fe62eb5e778640cdf815ca891e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c8ce62dcd2b12b29d6b4fc2a642b3fc7 = $(`<div id="html_c8ce62dcd2b12b29d6b4fc2a642b3fc7" style="width: 100.0%; height: 100.0%;"><b>新營站</b><br>遺失件數：181<br>遺失率：3.8 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_0487d4fe62eb5e778640cdf815ca891e.setContent(html_c8ce62dcd2b12b29d6b4fc2a642b3fc7);
+            
+        
+
+        circle_marker_472b626ef1ef5d245431dba05aef3bfa.bindPopup(popup_0487d4fe62eb5e778640cdf815ca891e)
+        ;
+
+        
+    
+    
+            var circle_marker_02d400a88164d1cf412483ddcb82240d = L.circleMarker(
+                [24.25438, 120.72374],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.798986451781083, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_0c384f54e01a44349e80c56cd006400e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_dadf1c1c08f7348e16555d6988a081ef = $(`<div id="html_dadf1c1c08f7348e16555d6988a081ef" style="width: 100.0%; height: 100.0%;"><b>豐原站</b><br>遺失件數：181<br>遺失率：2.5 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_0c384f54e01a44349e80c56cd006400e.setContent(html_dadf1c1c08f7348e16555d6988a081ef);
+            
+        
+
+        circle_marker_02d400a88164d1cf412483ddcb82240d.bindPopup(popup_0c384f54e01a44349e80c56cd006400e)
+        ;
+
+        
+    
+    
+            var circle_marker_2a5fca75468298c570248ce100d93d00 = L.circleMarker(
+                [22.63946, 120.30292],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.384366513684224, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_fce7fed45fb2c467ce56d9d2e051eefb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b44b99d48ec458957726b2a700f652b2 = $(`<div id="html_b44b99d48ec458957726b2a700f652b2" style="width: 100.0%; height: 100.0%;"><b>高雄站</b><br>遺失件數：171<br>遺失率：1.3 /十萬人次<br>高價值佔比：53%</div>`)[0];
+                popup_fce7fed45fb2c467ce56d9d2e051eefb.setContent(html_b44b99d48ec458957726b2a700f652b2);
+            
+        
+
+        circle_marker_2a5fca75468298c570248ce100d93d00.bindPopup(popup_fce7fed45fb2c467ce56d9d2e051eefb)
+        ;
+
+        
+    
+    
+            var circle_marker_dcdb0f21cb00b4b5a79d7eb0451f4112 = L.circleMarker(
+                [24.85898, 121.82258],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.384366513684224, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_a052cee082f5063d91871c96c187de1a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5136972952e95dc8c8a41296522b4063 = $(`<div id="html_5136972952e95dc8c8a41296522b4063" style="width: 100.0%; height: 100.0%;"><b>頭城站</b><br>遺失件數：171<br>遺失率：15.8 /十萬人次<br>高價值佔比：30%</div>`)[0];
+                popup_a052cee082f5063d91871c96c187de1a.setContent(html_5136972952e95dc8c8a41296522b4063);
+            
+        
+
+        circle_marker_dcdb0f21cb00b4b5a79d7eb0451f4112.bindPopup(popup_a052cee082f5063d91871c96c187de1a)
+        ;
+
+        
+    
+    
+            var circle_marker_99bd922d834cfbfad0fb4288b5b91290 = L.circleMarker(
+                [23.99264, 121.60158],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.129755836531643, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_559e9abbf53cc44c77346490d7cfa629 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d0553b20bf15f7642f7b47f6a0f8e035 = $(`<div id="html_d0553b20bf15f7642f7b47f6a0f8e035" style="width: 100.0%; height: 100.0%;"><b>花蓮站</b><br>遺失件數：165<br>遺失率：1.5 /十萬人次<br>高價值佔比：61%</div>`)[0];
+                popup_559e9abbf53cc44c77346490d7cfa629.setContent(html_d0553b20bf15f7642f7b47f6a0f8e035);
+            
+        
+
+        circle_marker_99bd922d834cfbfad0fb4288b5b91290.bindPopup(popup_559e9abbf53cc44c77346490d7cfa629)
+        ;
+
+        
+    
+    
+            var circle_marker_04ff5baa06fb1e5618ec72128ecfbd8c = L.circleMarker(
+                [24.13728, 120.68691],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.129755836531643, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_2b9ee5ae23e9be2b1e2463d349a8f572 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_23c552b35d7fa69534e0cf0bb15fcce4 = $(`<div id="html_23c552b35d7fa69534e0cf0bb15fcce4" style="width: 100.0%; height: 100.0%;"><b>臺中站</b><br>遺失件數：165<br>遺失率：0.7 /十萬人次<br>高價值佔比：75%</div>`)[0];
+                popup_2b9ee5ae23e9be2b1e2463d349a8f572.setContent(html_23c552b35d7fa69534e0cf0bb15fcce4);
+            
+        
+
+        circle_marker_04ff5baa06fb1e5618ec72128ecfbd8c.bindPopup(popup_2b9ee5ae23e9be2b1e2463d349a8f572)
+        ;
+
+        
+    
+    
+            var circle_marker_9880787e5918ca4f83a7a159f1c1fd7b = L.circleMarker(
+                [24.21214, 120.70564],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.738995596476478, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_339fb1582734c10f924044a81df07983 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d06db14f50809d02c8ac1d9e2c76ad44 = $(`<div id="html_d06db14f50809d02c8ac1d9e2c76ad44" style="width: 100.0%; height: 100.0%;"><b>潭子站</b><br>遺失件數：156<br>遺失率：7.2 /十萬人次<br>高價值佔比：23%</div>`)[0];
+                popup_339fb1582734c10f924044a81df07983.setContent(html_d06db14f50809d02c8ac1d9e2c76ad44);
+            
+        
+
+        circle_marker_9880787e5918ca4f83a7a159f1c1fd7b.bindPopup(popup_339fb1582734c10f924044a81df07983)
+        ;
+
+        
+    
+    
+            var circle_marker_d2ef5f24f5dc912416f280c8a7ba100a = L.circleMarker(
+                [25.10861, 121.80596],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.47219358530748, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e6486b437ad2bf558525c99b57fc40df = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c75ae9876b291ecb91fa5152c4b5c0c2 = $(`<div id="html_c75ae9876b291ecb91fa5152c4b5c0c2" style="width: 100.0%; height: 100.0%;"><b>瑞芳站</b><br>遺失件數：150<br>遺失率：3.7 /十萬人次<br>高價值佔比：29%</div>`)[0];
+                popup_e6486b437ad2bf558525c99b57fc40df.setContent(html_c75ae9876b291ecb91fa5152c4b5c0c2);
+            
+        
+
+        circle_marker_d2ef5f24f5dc912416f280c8a7ba100a.bindPopup(popup_e6486b437ad2bf558525c99b57fc40df)
+        ;
+
+        
+    
+    
+            var circle_marker_a7ba03269731d1cd452c7612310ce25a = L.circleMarker(
+                [22.79372, 121.1231],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.154086817411539, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_104a58ec65ede82853c63ff2c9875c7e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_db06bafe3b4ce2d4dcccde13f4a289a3 = $(`<div id="html_db06bafe3b4ce2d4dcccde13f4a289a3" style="width: 100.0%; height: 100.0%;"><b>臺東站</b><br>遺失件數：143<br>遺失率：2.4 /十萬人次<br>高價值佔比：60%</div>`)[0];
+                popup_104a58ec65ede82853c63ff2c9875c7e.setContent(html_db06bafe3b4ce2d4dcccde13f4a289a3);
+            
+        
+
+        circle_marker_a7ba03269731d1cd452c7612310ce25a.bindPopup(popup_104a58ec65ede82853c63ff2c9875c7e)
+        ;
+
+        
+    
+    
+            var circle_marker_82842a514a9f697622b189532fb403c4 = L.circleMarker(
+                [25.04771, 121.51784],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.015375522819156, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_917a22372d3205191b67b4a02b5a5875 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_33f12906e657fecf0f2123cd85449f03 = $(`<div id="html_33f12906e657fecf0f2123cd85449f03" style="width: 100.0%; height: 100.0%;"><b>臺北站</b><br>遺失件數：140<br>遺失率：0.2 /十萬人次<br>高價值佔比：5%</div>`)[0];
+                popup_917a22372d3205191b67b4a02b5a5875.setContent(html_33f12906e657fecf0f2123cd85449f03);
+            
+        
+
+        circle_marker_82842a514a9f697622b189532fb403c4.bindPopup(popup_917a22372d3205191b67b4a02b5a5875)
+        ;
+
+        
+    
+    
+            var circle_marker_d9cac5786e4bf836cdc66bc7cc18197a = L.circleMarker(
+                [24.67795, 121.77424],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.19959015705036, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_6421500f9e332fe1665586462be4fd60 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_be48d94aa72fc0bd4f6d75f33c968ae3 = $(`<div id="html_be48d94aa72fc0bd4f6d75f33c968ae3" style="width: 100.0%; height: 100.0%;"><b>羅東站</b><br>遺失件數：123<br>遺失率：2.7 /十萬人次<br>高價值佔比：35%</div>`)[0];
+                popup_6421500f9e332fe1665586462be4fd60.setContent(html_be48d94aa72fc0bd4f6d75f33c968ae3);
+            
+        
+
+        circle_marker_d9cac5786e4bf836cdc66bc7cc18197a.bindPopup(popup_6421500f9e332fe1665586462be4fd60)
+        ;
+
+        
+    
+    
+            var circle_marker_a255b5298775418a2caee7a9d5b13359 = L.circleMarker(
+                [23.47902, 120.44124],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.149897118905988, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_1049729bd48dac709b1783a8a55b4789 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f3b781cc694d502d9a428f783ffdfaf8 = $(`<div id="html_f3b781cc694d502d9a428f783ffdfaf8" style="width: 100.0%; height: 100.0%;"><b>嘉義站</b><br>遺失件數：122<br>遺失率：1.3 /十萬人次<br>高價值佔比：45%</div>`)[0];
+                popup_1049729bd48dac709b1783a8a55b4789.setContent(html_f3b781cc694d502d9a428f783ffdfaf8);
+            
+        
+
+        circle_marker_a255b5298775418a2caee7a9d5b13359.bindPopup(popup_1049729bd48dac709b1783a8a55b4789)
+        ;
+
+        
+    
+    
+            var circle_marker_ab732e1723e56632cd507c18e3febae1 = L.circleMarker(
+                [25.04921, 121.57799],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.100000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_a31bdb38b6ea73cb221cf5da533119dd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_835ec2d61e561b25b067f1e95338d84e = $(`<div id="html_835ec2d61e561b25b067f1e95338d84e" style="width: 100.0%; height: 100.0%;"><b>松山站</b><br>遺失件數：121<br>遺失率：0.8 /十萬人次<br>高價值佔比：41%</div>`)[0];
+                popup_a31bdb38b6ea73cb221cf5da533119dd.setContent(html_835ec2d61e561b25b067f1e95338d84e);
+            
+        
+
+        circle_marker_ab732e1723e56632cd507c18e3febae1.bindPopup(popup_a31bdb38b6ea73cb221cf5da533119dd)
+        ;
+
+        
+    
+    
+            var circle_marker_79415a416aab6f9035bd10caad19621c = L.circleMarker(
+                [22.99719, 120.21249],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.109455432198287, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_8c7aa45d934444aa5329b54df1bcef11 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a3f7cdc910bb9f5ac366f7da73bd8e14 = $(`<div id="html_a3f7cdc910bb9f5ac366f7da73bd8e14" style="width: 100.0%; height: 100.0%;"><b>臺南站</b><br>遺失件數：102<br>遺失率：0.4 /十萬人次<br>高價值佔比：43%</div>`)[0];
+                popup_8c7aa45d934444aa5329b54df1bcef11.setContent(html_a3f7cdc910bb9f5ac366f7da73bd8e14);
+            
+        
+
+        circle_marker_79415a416aab6f9035bd10caad19621c.bindPopup(popup_8c7aa45d934444aa5329b54df1bcef11)
+        ;
+
+        
+    
+    
+            var circle_marker_00ca33dc3be2735a871707c9bec79875 = L.circleMarker(
+                [22.79223, 120.30004],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.200980345045275, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_dfcf73d8461911e2a269ccc7911147db = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_437f19945bb2a9546af14d46e01b3710 = $(`<div id="html_437f19945bb2a9546af14d46e01b3710" style="width: 100.0%; height: 100.0%;"><b>岡山站</b><br>遺失件數：86<br>遺失率：3.5 /十萬人次<br>高價值佔比：31%</div>`)[0];
+                popup_dfcf73d8461911e2a269ccc7911147db.setContent(html_437f19945bb2a9546af14d46e01b3710);
+            
+        
+
+        circle_marker_00ca33dc3be2735a871707c9bec79875.bindPopup(popup_dfcf73d8461911e2a269ccc7911147db)
+        ;
+
+        
+    
+    
+            var circle_marker_0c337a661f4de16d0729fd334c3b6bc1 = L.circleMarker(
+                [22.66905, 120.48617],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.141498903022176, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_8389354e9ca75c9557532bb5eed7c535 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_72546189955a44027ac7968a7d9c09b3 = $(`<div id="html_72546189955a44027ac7968a7d9c09b3" style="width: 100.0%; height: 100.0%;"><b>屏東站</b><br>遺失件數：85<br>遺失率：0.9 /十萬人次<br>高價值佔比：47%</div>`)[0];
+                popup_8389354e9ca75c9557532bb5eed7c535.setContent(html_72546189955a44027ac7968a7d9c09b3);
+            
+        
+
+        circle_marker_0c337a661f4de16d0729fd334c3b6bc1.bindPopup(popup_8389354e9ca75c9557532bb5eed7c535)
+        ;
+
+        
+    
+    
+            var circle_marker_6bc3d41972f061276acfd010dfd8a10e = L.circleMarker(
+                [23.33155, 121.31172],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.070832376358855, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_8003dcadcddc7901019c4049345e26cd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_77f081cdd53631abad05b7bbc91b8d59 = $(`<div id="html_77f081cdd53631abad05b7bbc91b8d59" style="width: 100.0%; height: 100.0%;"><b>玉里站</b><br>遺失件數：68<br>遺失率：4.0 /十萬人次<br>高價值佔比：31%</div>`)[0];
+                popup_8003dcadcddc7901019c4049345e26cd.setContent(html_77f081cdd53631abad05b7bbc91b8d59);
+            
+        
+
+        circle_marker_6bc3d41972f061276acfd010dfd8a10e.bindPopup(popup_8003dcadcddc7901019c4049345e26cd)
+        ;
+
+        
+    
+    
+            var circle_marker_88ac266746edc723244adc4e7c2f2d23 = L.circleMarker(
+                [24.08177, 120.53854],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.003888049059697, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_acd61c012f7e468294bb6e08356f7ebb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_e354e65cb2daff71929f088ed3d14f80 = $(`<div id="html_e354e65cb2daff71929f088ed3d14f80" style="width: 100.0%; height: 100.0%;"><b>彰化站</b><br>遺失件數：67<br>遺失率：0.5 /十萬人次<br>高價值佔比：48%</div>`)[0];
+                popup_acd61c012f7e468294bb6e08356f7ebb.setContent(html_e354e65cb2daff71929f088ed3d14f80);
+            
+        
+
+        circle_marker_88ac266746edc723244adc4e7c2f2d23.bindPopup(popup_acd61c012f7e468294bb6e08356f7ebb)
+        ;
+
+        
+    
+    
+            var circle_marker_e108863764434fc580ee6c3b4f34a14c = L.circleMarker(
+                [24.95432, 121.35535],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.231646250902672, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_70ddd2e617cc81d72420e4c02b5f4ca4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7205769cd1f88587f2befae4f7a366a5 = $(`<div id="html_7205769cd1f88587f2befae4f7a366a5" style="width: 100.0%; height: 100.0%;"><b>鶯歌站</b><br>遺失件數：56<br>遺失率：0.7 /十萬人次<br>高價值佔比：27%</div>`)[0];
+                popup_70ddd2e617cc81d72420e4c02b5f4ca4.setContent(html_7205769cd1f88587f2befae4f7a366a5);
+            
+        
+
+        circle_marker_e108863764434fc580ee6c3b4f34a14c.bindPopup(popup_70ddd2e617cc81d72420e4c02b5f4ca4)
+        ;
+
+        
+    
+    
+            var circle_marker_b6552b445a5eaaa1471a75b7c014111a = L.circleMarker(
+                [24.83892, 121.00936],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.15781833580523, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e7e280bbf9f5326efc648124adbaed6b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ed04f858b19c91a47d9d8dbfac7d2d50 = $(`<div id="html_ed04f858b19c91a47d9d8dbfac7d2d50" style="width: 100.0%; height: 100.0%;"><b>竹北站</b><br>遺失件數：55<br>遺失率：1.1 /十萬人次<br>高價值佔比：42%</div>`)[0];
+                popup_e7e280bbf9f5326efc648124adbaed6b.setContent(html_ed04f858b19c91a47d9d8dbfac7d2d50);
+            
+        
+
+        circle_marker_b6552b445a5eaaa1471a75b7c014111a.bindPopup(popup_e7e280bbf9f5326efc648124adbaed6b)
+        ;
+
+        
+    
+    
+            var circle_marker_7fd991d6e856b4c61ebff2dfaf2ebaa2 = L.circleMarker(
+                [24.92201, 121.05592],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.932212806020777, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_66c4cf3e0bf7e088c5600e30ef9572ba = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9d4bf7144c86537c2a5530b0a7f83d20 = $(`<div id="html_9d4bf7144c86537c2a5530b0a7f83d20" style="width: 100.0%; height: 100.0%;"><b>北湖站</b><br>遺失件數：52<br>遺失率：6.9 /十萬人次<br>高價值佔比：21%</div>`)[0];
+                popup_66c4cf3e0bf7e088c5600e30ef9572ba.setContent(html_9d4bf7144c86537c2a5530b0a7f83d20);
+            
+        
+
+        circle_marker_7fd991d6e856b4c61ebff2dfaf2ebaa2.bindPopup(popup_66c4cf3e0bf7e088c5600e30ef9572ba)
+        ;
+
+        
+    
+    
+            var circle_marker_f8650a3396f4937ed9a3988216c9b2ed = L.circleMarker(
+                [25.00419, 121.44477],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.29657453878188, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_acb25b8a9730dca9bf2e11f24bbbcf28 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5a052eb892ee769cc15ea4796da9ba1f = $(`<div id="html_5a052eb892ee769cc15ea4796da9ba1f" style="width: 100.0%; height: 100.0%;"><b>浮洲站</b><br>遺失件數：44<br>遺失率：1.6 /十萬人次<br>高價值佔比：55%</div>`)[0];
+                popup_acb25b8a9730dca9bf2e11f24bbbcf28.setContent(html_5a052eb892ee769cc15ea4796da9ba1f);
+            
+        
+
+        circle_marker_f8650a3396f4937ed9a3988216c9b2ed.bindPopup(popup_acb25b8a9730dca9bf2e11f24bbbcf28)
+        ;
+
+        
+    
+    
+            var circle_marker_3daf139342e0076fb376d9f1f4ecdfe5 = L.circleMarker(
+                [24.23702, 120.55752],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.29657453878188, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_3b3698c59a92d9a0472666bdb7f25592 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_2182ca0468752eea8801e2e71b6f6658 = $(`<div id="html_2182ca0468752eea8801e2e71b6f6658" style="width: 100.0%; height: 100.0%;"><b>沙鹿站</b><br>遺失件數：44<br>遺失率：1.8 /十萬人次<br>高價值佔比：46%</div>`)[0];
+                popup_3b3698c59a92d9a0472666bdb7f25592.setContent(html_2182ca0468752eea8801e2e71b6f6658);
+            
+        
+
+        circle_marker_3daf139342e0076fb376d9f1f4ecdfe5.bindPopup(popup_3b3698c59a92d9a0472666bdb7f25592)
+        ;
+
+        
+    
+    
+            var circle_marker_8425ce51eb32de3d6fac116dc551c923 = L.circleMarker(
+                [24.97273, 121.39254],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.600000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_7460754a4fec034620d16e8e96d3cec8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9526cbe9120d311252528c2bc3acdc37 = $(`<div id="html_9526cbe9120d311252528c2bc3acdc37" style="width: 100.0%; height: 100.0%;"><b>山佳站</b><br>遺失件數：36<br>遺失率：2.3 /十萬人次<br>高價值佔比：19%</div>`)[0];
+                popup_7460754a4fec034620d16e8e96d3cec8.setContent(html_9526cbe9120d311252528c2bc3acdc37);
+            
+        
+
+        circle_marker_8425ce51eb32de3d6fac116dc551c923.bindPopup(popup_7460754a4fec034620d16e8e96d3cec8)
+        ;
+
+        
+    
+    
+            var circle_marker_7667aae4462053eb6feb84ca6799e0f6 = L.circleMarker(
+                [22.63425, 120.34245],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.600000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_ee6ecda20a2ab1da817294aab13e4e2e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_786066670368007e0b7473b445b59620 = $(`<div id="html_786066670368007e0b7473b445b59620" style="width: 100.0%; height: 100.0%;"><b>正義站</b><br>遺失件數：36<br>遺失率：3.3 /十萬人次<br>高價值佔比：28%</div>`)[0];
+                popup_ee6ecda20a2ab1da817294aab13e4e2e.setContent(html_786066670368007e0b7473b445b59620);
+            
+        
+
+        circle_marker_7667aae4462053eb6feb84ca6799e0f6.bindPopup(popup_ee6ecda20a2ab1da817294aab13e4e2e)
+        ;
+
+        
+    
+    
+            var circle_marker_a22e72aacf2bc5fc72b9c908bf95424e = L.circleMarker(
+                [23.71157, 120.54117],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.507687761409578, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_4d12e292eddb0f150d3cbdd67a9463a2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a0f5884e141bbb41c6b43468fec71a04 = $(`<div id="html_a0f5884e141bbb41c6b43468fec71a04" style="width: 100.0%; height: 100.0%;"><b>斗六站</b><br>遺失件數：35<br>遺失率：0.7 /十萬人次<br>高價值佔比：31%</div>`)[0];
+                popup_4d12e292eddb0f150d3cbdd67a9463a2.setContent(html_a0f5884e141bbb41c6b43468fec71a04);
+            
+        
+
+        circle_marker_a22e72aacf2bc5fc72b9c908bf95424e.bindPopup(popup_4d12e292eddb0f150d3cbdd67a9463a2)
+        ;
+
+        
+    
+    
+            var circle_marker_f57051ee9a5574abe3ee294302550ec8 = L.circleMarker(
+                [23.66631, 121.42117],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.41404708432983, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_eed6f2bb50243a1fbd5f62473a3fd873 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f862e391b1a2ea3ea487c8855a154148 = $(`<div id="html_f862e391b1a2ea3ea487c8855a154148" style="width: 100.0%; height: 100.0%;"><b>光復站</b><br>遺失件數：34<br>遺失率：7.5 /十萬人次<br>高價值佔比：32%</div>`)[0];
+                popup_eed6f2bb50243a1fbd5f62473a3fd873.setContent(html_f862e391b1a2ea3ea487c8855a154148);
+            
+        
+
+        circle_marker_f57051ee9a5574abe3ee294302550ec8.bindPopup(popup_eed6f2bb50243a1fbd5f62473a3fd873)
+        ;
+
+        
+    
+    
+            var circle_marker_6c27fa90d6738c840fbf81e8bb5b41f9 = L.circleMarker(
+                [24.82703, 121.77535],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.41404708432983, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_50265bbf9d12e9a315942391d2761e9a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_003c72657420ab11ea260cc9b6e8ac5d = $(`<div id="html_003c72657420ab11ea260cc9b6e8ac5d" style="width: 100.0%; height: 100.0%;"><b>礁溪站</b><br>遺失件數：34<br>遺失率：2.0 /十萬人次<br>高價值佔比：15%</div>`)[0];
+                popup_50265bbf9d12e9a315942391d2761e9a.setContent(html_003c72657420ab11ea260cc9b6e8ac5d);
+            
+        
+
+        circle_marker_6c27fa90d6738c840fbf81e8bb5b41f9.bindPopup(popup_50265bbf9d12e9a315942391d2761e9a)
+        ;
+
+        
+    
+    
+            var circle_marker_1be773a798232b2cee52309cd20b8c77 = L.circleMarker(
+                [25.04111, 121.77514],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.124540799113024, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_155762c63296b35bbf4251adda48c8ba = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8ec714095761ea20325754e0e5b99622 = $(`<div id="html_8ec714095761ea20325754e0e5b99622" style="width: 100.0%; height: 100.0%;"><b>十分站</b><br>遺失件數：31<br>遺失率：5.0 /十萬人次<br>高價值佔比：32%</div>`)[0];
+                popup_155762c63296b35bbf4251adda48c8ba.setContent(html_8ec714095761ea20325754e0e5b99622);
+            
+        
+
+        circle_marker_1be773a798232b2cee52309cd20b8c77.bindPopup(popup_155762c63296b35bbf4251adda48c8ba)
+        ;
+
+        
+    
+    
+            var circle_marker_00148f4e554d8a0048647495f979837a = L.circleMarker(
+                [24.90288, 121.04411],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8206528843421, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_1fae161985f04a2a75ee3564cbf7c455 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3a1e52736e4f288e20b720f3ec7bbc86 = $(`<div id="html_3a1e52736e4f288e20b720f3ec7bbc86" style="width: 100.0%; height: 100.0%;"><b>湖口站</b><br>遺失件數：28<br>遺失率：0.9 /十萬人次<br>高價值佔比：39%</div>`)[0];
+                popup_1fae161985f04a2a75ee3564cbf7c455.setContent(html_3a1e52736e4f288e20b720f3ec7bbc86);
+            
+        
+
+        circle_marker_00148f4e554d8a0048647495f979837a.bindPopup(popup_1fae161985f04a2a75ee3564cbf7c455)
+        ;
+
+        
+    
+    
+            var circle_marker_e602c896c26578557de49cf0d50f163e = L.circleMarker(
+                [24.91402, 121.14641],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8206528843421, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e083a64832d9570d4436951ff3c13539 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0348dfa3aa9a17a62e836036567df5d8 = $(`<div id="html_0348dfa3aa9a17a62e836036567df5d8" style="width: 100.0%; height: 100.0%;"><b>楊梅站</b><br>遺失件數：28<br>遺失率：0.6 /十萬人次<br>高價值佔比：25%</div>`)[0];
+                popup_e083a64832d9570d4436951ff3c13539.setContent(html_0348dfa3aa9a17a62e836036567df5d8);
+            
+        
+
+        circle_marker_e602c896c26578557de49cf0d50f163e.bindPopup(popup_e083a64832d9570d4436951ff3c13539)
+        ;
+
+        
+    
+    
+            var circle_marker_29c6a55426a62fb201db4a939036483a = L.circleMarker(
+                [24.78145, 121.03141],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_902def0d793d3761d99c2f4a0d28092c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_60ae7248a8deffa176700dc5c9676646 = $(`<div id="html_60ae7248a8deffa176700dc5c9676646" style="width: 100.0%; height: 100.0%;"><b>竹中站</b><br>遺失件數：25<br>遺失率：3.9 /十萬人次<br>高價值佔比：24%</div>`)[0];
+                popup_902def0d793d3761d99c2f4a0d28092c.setContent(html_60ae7248a8deffa176700dc5c9676646);
+            
+        
+
+        circle_marker_29c6a55426a62fb201db4a939036483a.bindPopup(popup_902def0d793d3761d99c2f4a0d28092c)
+        ;
+
+        
+    
+    
+            var circle_marker_31cd98e78490145bbfcdff47c683c635 = L.circleMarker(
+                [23.55519, 120.43139],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.919349550499538, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_956196e308900a41b17b69c62cf9d119 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_22567f6b5b755fb9cae470a093f832e3 = $(`<div id="html_22567f6b5b755fb9cae470a093f832e3" style="width: 100.0%; height: 100.0%;"><b>民雄站</b><br>遺失件數：20<br>遺失率：1.2 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_956196e308900a41b17b69c62cf9d119.setContent(html_22567f6b5b755fb9cae470a093f832e3);
+            
+        
+
+        circle_marker_31cd98e78490145bbfcdff47c683c635.bindPopup(popup_956196e308900a41b17b69c62cf9d119)
+        ;
+
+        
+    
+    
+            var circle_marker_57756120ab52539bcd23ce645337cd5f = L.circleMarker(
+                [24.78811, 121.02196],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.666904755831213, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e4852c96330907616da514dd19e91451 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ad9f811a6dd26a564a300446996b8350 = $(`<div id="html_ad9f811a6dd26a564a300446996b8350" style="width: 100.0%; height: 100.0%;"><b>新莊站</b><br>遺失件數：18<br>遺失率：1.0 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_e4852c96330907616da514dd19e91451.setContent(html_ad9f811a6dd26a564a300446996b8350);
+            
+        
+
+        circle_marker_57756120ab52539bcd23ce645337cd5f.bindPopup(popup_e4852c96330907616da514dd19e91451)
+        ;
+
+        
+    
+    
+            var circle_marker_e4a3f34282738c87eaca4509e248b870 = L.circleMarker(
+                [23.49749, 121.37683],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.666904755831213, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e6e079a0b9ee1b02ba65df3d8c15f269 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_343690cbcfd11c5f168df136515949f1 = $(`<div id="html_343690cbcfd11c5f168df136515949f1" style="width: 100.0%; height: 100.0%;"><b>瑞穗站</b><br>遺失件數：18<br>遺失率：2.8 /十萬人次<br>高價值佔比：17%</div>`)[0];
+                popup_e6e079a0b9ee1b02ba65df3d8c15f269.setContent(html_343690cbcfd11c5f168df136515949f1);
+            
+        
+
+        circle_marker_e4a3f34282738c87eaca4509e248b870.bindPopup(popup_e6e079a0b9ee1b02ba65df3d8c15f269)
+        ;
+
+        
+    
+    
+            var circle_marker_aa1dc4952ca56b293f9565fa52d618c9 = L.circleMarker(
+                [24.68662, 120.8806],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.260281680828159, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_0bcea9a2ab781470d362c2ee6ecf7c85 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4a2a88648bda077abbdf09b896d15e0a = $(`<div id="html_4a2a88648bda077abbdf09b896d15e0a" style="width: 100.0%; height: 100.0%;"><b>竹南站</b><br>遺失件數：15<br>遺失率：0.2 /十萬人次<br>高價值佔比：73%</div>`)[0];
+                popup_0bcea9a2ab781470d362c2ee6ecf7c85.setContent(html_4a2a88648bda077abbdf09b896d15e0a);
+            
+        
+
+        circle_marker_aa1dc4952ca56b293f9565fa52d618c9.bindPopup(popup_0bcea9a2ab781470d362c2ee6ecf7c85)
+        ;
+
+        
+    
+    
+            var circle_marker_9b1e3615736634b1c1cffeb2cea52322 = L.circleMarker(
+                [23.67265, 120.48056],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.115823125451336, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_138350df39b32000005266f9ee94b159 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7c9f9c29e20540d987e890baa790c172 = $(`<div id="html_7c9f9c29e20540d987e890baa790c172" style="width: 100.0%; height: 100.0%;"><b>斗南站</b><br>遺失件數：14<br>遺失率：0.8 /十萬人次<br>高價值佔比：36%</div>`)[0];
+                popup_138350df39b32000005266f9ee94b159.setContent(html_7c9f9c29e20540d987e890baa790c172);
+            
+        
+
+        circle_marker_9b1e3615736634b1c1cffeb2cea52322.bindPopup(popup_138350df39b32000005266f9ee94b159)
+        ;
+
+        
+    
+    
+            var circle_marker_96c3d21f3b9006de0b2b633e06d88b4a = L.circleMarker(
+                [22.76098, 120.31011],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.9661064030103885, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_a682829f70a8af8583575986dc7a37f1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9af15e0d4c97cd7d9bf505cad32dad90 = $(`<div id="html_9af15e0d4c97cd7d9bf505cad32dad90" style="width: 100.0%; height: 100.0%;"><b>橋頭站</b><br>遺失件數：13<br>遺失率：1.0 /十萬人次<br>高價值佔比：31%</div>`)[0];
+                popup_a682829f70a8af8583575986dc7a37f1.setContent(html_9af15e0d4c97cd7d9bf505cad32dad90);
+            
+        
+
+        circle_marker_96c3d21f3b9006de0b2b633e06d88b4a.bindPopup(popup_a682829f70a8af8583575986dc7a37f1)
+        ;
+
+        
+    
+    
+            var circle_marker_bc05bfa501314c7443abd1d5469528a0 = L.circleMarker(
+                [23.13333, 120.30653],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.810511776651531, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_775b51022a567d6080f64909d27e27bd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c1d3552a6589452b29abfa7125cfb692 = $(`<div id="html_c1d3552a6589452b29abfa7125cfb692" style="width: 100.0%; height: 100.0%;"><b>善化站</b><br>遺失件數：12<br>遺失率：0.4 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_775b51022a567d6080f64909d27e27bd.setContent(html_c1d3552a6589452b29abfa7125cfb692);
+            
+        
+
+        circle_marker_bc05bfa501314c7443abd1d5469528a0.bindPopup(popup_775b51022a567d6080f64909d27e27bd)
+        ;
+
+        
+    
+    
+            var circle_marker_410684da7d38f41ffd931bb9ac2e3c0b = L.circleMarker(
+                [25.13191, 121.73837],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.810511776651531, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_085e86fe88e1c6b6d3142746a5974a00 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_fb1428ce6d763fd75ac9f6f3f18d8e91 = $(`<div id="html_fb1428ce6d763fd75ac9f6f3f18d8e91" style="width: 100.0%; height: 100.0%;"><b>基隆站</b><br>遺失件數：12<br>遺失率：0.2 /十萬人次<br>高價值佔比：58%</div>`)[0];
+                popup_085e86fe88e1c6b6d3142746a5974a00.setContent(html_fb1428ce6d763fd75ac9f6f3f18d8e91);
+            
+        
+
+        circle_marker_410684da7d38f41ffd931bb9ac2e3c0b.bindPopup(popup_085e86fe88e1c6b6d3142746a5974a00)
+        ;
+
+        
+    
+    
+            var circle_marker_1fba53316a80d325f2827b841f8f4ae3 = L.circleMarker(
+                [24.73823, 121.09472],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.810511776651531, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_61510ba8ce5c4c0dd0e07b95ce2de027 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_92de4016b639f088345e9f4de760ca63 = $(`<div id="html_92de4016b639f088345e9f4de760ca63" style="width: 100.0%; height: 100.0%;"><b>竹東站</b><br>遺失件數：12<br>遺失率：2.7 /十萬人次<br>高價值佔比：42%</div>`)[0];
+                popup_61510ba8ce5c4c0dd0e07b95ce2de027.setContent(html_92de4016b639f088345e9f4de760ca63);
+            
+        
+
+        circle_marker_1fba53316a80d325f2827b841f8f4ae3.bindPopup(popup_61510ba8ce5c4c0dd0e07b95ce2de027)
+        ;
+
+        
+    
+    
+            var circle_marker_f667b01efa2cbfc46aa17b33d7a41d02 = L.circleMarker(
+                [24.91945, 121.18366],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.478505426185218, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_5785db91047e0a660d556fbabe6bf4b0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7def8be64ea420ff52e9a4a9bf2bcca1 = $(`<div id="html_7def8be64ea420ff52e9a4a9bf2bcca1" style="width: 100.0%; height: 100.0%;"><b>埔心站</b><br>遺失件數：10<br>遺失率：0.2 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_5785db91047e0a660d556fbabe6bf4b0.setContent(html_7def8be64ea420ff52e9a4a9bf2bcca1);
+            
+        
+
+        circle_marker_f667b01efa2cbfc46aa17b33d7a41d02.bindPopup(popup_5785db91047e0a660d556fbabe6bf4b0)
+        ;
+
+        
+    
+    
+            var circle_marker_ebb2b5f9f49080483f869c64ea1b8a87 = L.circleMarker(
+                [22.55008, 120.53631],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.478505426185218, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_68c5761e42682b330e1999944fbc3e22 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_54049cc70a3c2a7bf711189dfb4aef1e = $(`<div id="html_54049cc70a3c2a7bf711189dfb4aef1e" style="width: 100.0%; height: 100.0%;"><b>潮州站</b><br>遺失件數：10<br>遺失率：0.3 /十萬人次<br>高價值佔比：30%</div>`)[0];
+                popup_68c5761e42682b330e1999944fbc3e22.setContent(html_54049cc70a3c2a7bf711189dfb4aef1e);
+            
+        
+
+        circle_marker_ebb2b5f9f49080483f869c64ea1b8a87.bindPopup(popup_68c5761e42682b330e1999944fbc3e22)
+        ;
+
+        
+    
+    
+            var circle_marker_20387c5b484e4dd61eb1a0cd2411ee16 = L.circleMarker(
+                [22.66589, 120.28701],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.300000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_1506be6b217d5f0c43541db9b227535c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0c2210abd9a3dfe031a5b278306eb111 = $(`<div id="html_0c2210abd9a3dfe031a5b278306eb111" style="width: 100.0%; height: 100.0%;"><b>內惟站</b><br>遺失件數：9<br>遺失率：1.2 /十萬人次<br>高價值佔比：22%</div>`)[0];
+                popup_1506be6b217d5f0c43541db9b227535c.setContent(html_0c2210abd9a3dfe031a5b278306eb111);
+            
+        
+
+        circle_marker_20387c5b484e4dd61eb1a0cd2411ee16.bindPopup(popup_1506be6b217d5f0c43541db9b227535c)
+        ;
+
+        
+    
+    
+            var circle_marker_9b0e670e1ca9e61c196375b9faae0c3f = L.circleMarker(
+                [25.03851, 121.86654],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.300000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_ffb7f1141029a83259e382e5ff0887b0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8ccb2700b276aaee9e9bf35941adb184 = $(`<div id="html_8ccb2700b276aaee9e9bf35941adb184" style="width: 100.0%; height: 100.0%;"><b>雙溪站</b><br>遺失件數：9<br>遺失率：1.2 /十萬人次<br>高價值佔比：44%</div>`)[0];
+                popup_ffb7f1141029a83259e382e5ff0887b0.setContent(html_8ccb2700b276aaee9e9bf35941adb184);
+            
+        
+
+        circle_marker_9b0e670e1ca9e61c196375b9faae0c3f.bindPopup(popup_ffb7f1141029a83259e382e5ff0887b0)
+        ;
+
+        
+    
+    
+            var circle_marker_2f3d6ee5d98055261b04ce00ce99e45f = L.circleMarker(
+                [22.72696, 120.32425],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.300000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e7106657dd61d1045aeca7f6c0300c79 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7d5ea07fbff7e371556b81d27ab2ec29 = $(`<div id="html_7d5ea07fbff7e371556b81d27ab2ec29" style="width: 100.0%; height: 100.0%;"><b>楠梓站</b><br>遺失件數：9<br>遺失率：0.4 /十萬人次<br>高價值佔比：22%</div>`)[0];
+                popup_e7106657dd61d1045aeca7f6c0300c79.setContent(html_7d5ea07fbff7e371556b81d27ab2ec29);
+            
+        
+
+        circle_marker_2f3d6ee5d98055261b04ce00ce99e45f.bindPopup(popup_e7106657dd61d1045aeca7f6c0300c79)
+        ;
+
+        
+    
+    
+            var circle_marker_39a33e8d3afe97e569d5a18fd3722291 = L.circleMarker(
+                [24.70535, 121.18255],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.11126983722081, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_ffb6e3f1d91c0c99bc4c36aaed31ed00 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_67834a4d8103a875e9e496fb8cb17647 = $(`<div id="html_67834a4d8103a875e9e496fb8cb17647" style="width: 100.0%; height: 100.0%;"><b>內灣站</b><br>遺失件數：8<br>遺失率：1.9 /十萬人次<br>高價值佔比：62%</div>`)[0];
+                popup_ffb6e3f1d91c0c99bc4c36aaed31ed00.setContent(html_67834a4d8103a875e9e496fb8cb17647);
+            
+        
+
+        circle_marker_39a33e8d3afe97e569d5a18fd3722291.bindPopup(popup_ffb6e3f1d91c0c99bc4c36aaed31ed00)
+        ;
+
+        
+    
+    
+            var circle_marker_e7d05f74821e2fe98538e5aff3dab75a = L.circleMarker(
+                [24.86939, 120.99626],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.11126983722081, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_638a3aa58ae222584c0064edb7b518d0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4f2d0cc72c7253c6fd60e34fd8da9546 = $(`<div id="html_4f2d0cc72c7253c6fd60e34fd8da9546" style="width: 100.0%; height: 100.0%;"><b>新豐站</b><br>遺失件數：8<br>遺失率：0.1 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_638a3aa58ae222584c0064edb7b518d0.setContent(html_4f2d0cc72c7253c6fd60e34fd8da9546);
+            
+        
+
+        circle_marker_e7d05f74821e2fe98538e5aff3dab75a.bindPopup(popup_638a3aa58ae222584c0064edb7b518d0)
+        ;
+
+        
+    
+    
+            var circle_marker_cbbb72d2c328c0bf178043d95e93d9c1 = L.circleMarker(
+                [24.80875, 120.98381],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.11126983722081, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_05a5b76793fb7f3b8c12678859e3a2be = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0b9a966ed7383b76b483ef3570b0e9c7 = $(`<div id="html_0b9a966ed7383b76b483ef3570b0e9c7" style="width: 100.0%; height: 100.0%;"><b>北新竹站</b><br>遺失件數：8<br>遺失率：0.4 /十萬人次<br>高價值佔比：12%</div>`)[0];
+                popup_05a5b76793fb7f3b8c12678859e3a2be.setContent(html_0b9a966ed7383b76b483ef3570b0e9c7);
+            
+        
+
+        circle_marker_cbbb72d2c328c0bf178043d95e93d9c1.bindPopup(popup_05a5b76793fb7f3b8c12678859e3a2be)
+        ;
+
+        
+    
+    
+            var circle_marker_998410094ce742a2dd48464c684c44b4 = L.circleMarker(
+                [23.85826, 120.59123],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.11126983722081, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_98e3f63d7461d58e56dcad82cf42e969 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4373c01c78e4432f78974c37c402ad07 = $(`<div id="html_4373c01c78e4432f78974c37c402ad07" style="width: 100.0%; height: 100.0%;"><b>田中站</b><br>遺失件數：8<br>遺失率：0.3 /十萬人次<br>高價值佔比：75%</div>`)[0];
+                popup_98e3f63d7461d58e56dcad82cf42e969.setContent(html_4373c01c78e4432f78974c37c402ad07);
+            
+        
+
+        circle_marker_998410094ce742a2dd48464c684c44b4.bindPopup(popup_98e3f63d7461d58e56dcad82cf42e969)
+        ;
+
+        
+    
+    
+            var circle_marker_3b9cf6d46b20dbf35e00885a62cba55c = L.circleMarker(
+                [24.80766, 121.03941],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.694438717061496, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_4e2f30311958df53cf4615aa37e24b76 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_19724a3c5f0bfbb90b53ccbe9b3b6343 = $(`<div id="html_19724a3c5f0bfbb90b53ccbe9b3b6343" style="width: 100.0%; height: 100.0%;"><b>六家站</b><br>遺失件數：6<br>遺失率：0.2 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_4e2f30311958df53cf4615aa37e24b76.setContent(html_19724a3c5f0bfbb90b53ccbe9b3b6343);
+            
+        
+
+        circle_marker_3b9cf6d46b20dbf35e00885a62cba55c.bindPopup(popup_4e2f30311958df53cf4615aa37e24b76)
+        ;
+
+        
+    
+    
+            var circle_marker_8798411342995bdfda7d4b57b2b4d05e = L.circleMarker(
+                [25.03357, 121.50021],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.694438717061496, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_b6e5cce6a9a3876c49c0dae60fcdb456 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7ed5f07fbc3c50c9394e03e9a1327f8e = $(`<div id="html_7ed5f07fbc3c50c9394e03e9a1327f8e" style="width: 100.0%; height: 100.0%;"><b>萬華站</b><br>遺失件數：6<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_b6e5cce6a9a3876c49c0dae60fcdb456.setContent(html_7ed5f07fbc3c50c9394e03e9a1327f8e);
+            
+        
+
+        circle_marker_8798411342995bdfda7d4b57b2b4d05e.bindPopup(popup_b6e5cce6a9a3876c49c0dae60fcdb456)
+        ;
+
+        
+    
+    
+            var circle_marker_aa7f92db7c64bcc1996cea4d21f570db = L.circleMarker(
+                [24.57001, 120.82233],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.694438717061496, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_297e583cc9d9c06c46955a907d7f64bb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6546dfa9bb84d762e54eb5c6da93d9dd = $(`<div id="html_6546dfa9bb84d762e54eb5c6da93d9dd" style="width: 100.0%; height: 100.0%;"><b>苗栗站</b><br>遺失件數：6<br>遺失率：0.1 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_297e583cc9d9c06c46955a907d7f64bb.setContent(html_6546dfa9bb84d762e54eb5c6da93d9dd);
+            
+        
+
+        circle_marker_aa7f92db7c64bcc1996cea4d21f570db.bindPopup(popup_297e583cc9d9c06c46955a907d7f64bb)
+        ;
+
+        
+    
+    
+            var circle_marker_6c345fd569fc2a72c54e06e65487e461 = L.circleMarker(
+                [25.06789, 121.66115],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.694438717061496, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_5cced99dc4720fed338ef6137c32e57c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_76f5b7b1ea0afcd33790ae56494e75b1 = $(`<div id="html_76f5b7b1ea0afcd33790ae56494e75b1" style="width: 100.0%; height: 100.0%;"><b>汐止站</b><br>遺失件數：6<br>遺失率：0.1 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_5cced99dc4720fed338ef6137c32e57c.setContent(html_76f5b7b1ea0afcd33790ae56494e75b1);
+            
+        
+
+        circle_marker_6c345fd569fc2a72c54e06e65487e461.bindPopup(popup_5cced99dc4720fed338ef6137c32e57c)
+        ;
+
+        
+    
+    
+            var circle_marker_1d32aa4d7d544198b850818c6e85b8d6 = L.circleMarker(
+                [25.02571, 121.74019],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.694438717061496, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_371b8a90026fc7178dce96752070be03 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_2fd37441dfd5e17cf912f6d5e9679f5b = $(`<div id="html_2fd37441dfd5e17cf912f6d5e9679f5b" style="width: 100.0%; height: 100.0%;"><b>平溪站</b><br>遺失件數：6<br>遺失率：2.3 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_371b8a90026fc7178dce96752070be03.setContent(html_2fd37441dfd5e17cf912f6d5e9679f5b);
+            
+        
+
+        circle_marker_1d32aa4d7d544198b850818c6e85b8d6.bindPopup(popup_371b8a90026fc7178dce96752070be03)
+        ;
+
+        
+    
+    
+            var circle_marker_b152261878652226d5cc30baf49f450a = L.circleMarker(
+                [24.93836, 121.88983],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.694438717061496, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f0f13e6b7bd1e4152a031106b3e9c7f5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_944912f58209e0b0f68f94da1229fa0a = $(`<div id="html_944912f58209e0b0f68f94da1229fa0a" style="width: 100.0%; height: 100.0%;"><b>大溪站</b><br>遺失件數：6<br>遺失率：3.0 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_f0f13e6b7bd1e4152a031106b3e9c7f5.setContent(html_944912f58209e0b0f68f94da1229fa0a);
+            
+        
+
+        circle_marker_b152261878652226d5cc30baf49f450a.bindPopup(popup_f0f13e6b7bd1e4152a031106b3e9c7f5)
+        ;
+
+        
+    
+    
+            var circle_marker_7c308c1e7107eeda489f1cc1758665e1 = L.circleMarker(
+                [24.88375, 121.84572],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_97e3d8a233031708d54c2836fd18aaa2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4a2956ce983f50c0141ee7a09f649df9 = $(`<div id="html_4a2956ce983f50c0141ee7a09f649df9" style="width: 100.0%; height: 100.0%;"><b>外澳站</b><br>遺失件數：5<br>遺失率：4.2 /十萬人次<br>高價值佔比：40%</div>`)[0];
+                popup_97e3d8a233031708d54c2836fd18aaa2.setContent(html_4a2956ce983f50c0141ee7a09f649df9);
+            
+        
+
+        circle_marker_7c308c1e7107eeda489f1cc1758665e1.bindPopup(popup_97e3d8a233031708d54c2836fd18aaa2)
+        ;
+
+        
+    
+    
+            var circle_marker_e758928bf098594c85610666fcd4eca6 = L.circleMarker(
+                [23.96823, 121.58266],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_cdab4f2a980d7744de2d93227d0dde99 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_52d1c80860e72525f69788feda7fb708 = $(`<div id="html_52d1c80860e72525f69788feda7fb708" style="width: 100.0%; height: 100.0%;"><b>吉安站</b><br>遺失件數：5<br>遺失率：1.0 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_cdab4f2a980d7744de2d93227d0dde99.setContent(html_52d1c80860e72525f69788feda7fb708);
+            
+        
+
+        circle_marker_e758928bf098594c85610666fcd4eca6.bindPopup(popup_cdab4f2a980d7744de2d93227d0dde99)
+        ;
+
+        
+    
+    
+            var circle_marker_35a7de9130e277790113bd49e1ced150 = L.circleMarker(
+                [25.02391, 121.72391],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_269c1590001063c73a2ea1161334cf41 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4f33e64d5d8d59f6b448622d09f50a67 = $(`<div id="html_4f33e64d5d8d59f6b448622d09f50a67" style="width: 100.0%; height: 100.0%;"><b>菁桐站</b><br>遺失件數：5<br>遺失率：1.9 /十萬人次<br>高價值佔比：60%</div>`)[0];
+                popup_269c1590001063c73a2ea1161334cf41.setContent(html_4f33e64d5d8d59f6b448622d09f50a67);
+            
+        
+
+        circle_marker_35a7de9130e277790113bd49e1ced150.bindPopup(popup_269c1590001063c73a2ea1161334cf41)
+        ;
+
+        
+    
+    
+            var circle_marker_f93ca91d8eb76d9c2adbf0d033ff8859 = L.circleMarker(
+                [22.36802, 120.59511],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_6681fa65fb89c4a762ba4f5e2e8e0bbe = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9ebb38a0a60998589251651e640c3229 = $(`<div id="html_9ebb38a0a60998589251651e640c3229" style="width: 100.0%; height: 100.0%;"><b>枋寮站</b><br>遺失件數：5<br>遺失率：0.4 /十萬人次<br>高價值佔比：20%</div>`)[0];
+                popup_6681fa65fb89c4a762ba4f5e2e8e0bbe.setContent(html_9ebb38a0a60998589251651e640c3229);
+            
+        
+
+        circle_marker_f93ca91d8eb76d9c2adbf0d033ff8859.bindPopup(popup_6681fa65fb89c4a762ba4f5e2e8e0bbe)
+        ;
+
+        
+    
+    
+            var circle_marker_4f2887614b188d138caf9447be00a98b = L.circleMarker(
+                [22.36526, 120.90094],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_6808e94f63150a7aaabe9b8a684eeed1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9a9b027cd81e2807f03578c47b938b97 = $(`<div id="html_9a9b027cd81e2807f03578c47b938b97" style="width: 100.0%; height: 100.0%;"><b>大武站</b><br>遺失件數：5<br>遺失率：2.6 /十萬人次<br>高價值佔比：40%</div>`)[0];
+                popup_6808e94f63150a7aaabe9b8a684eeed1.setContent(html_9a9b027cd81e2807f03578c47b938b97);
+            
+        
+
+        circle_marker_4f2887614b188d138caf9447be00a98b.bindPopup(popup_6808e94f63150a7aaabe9b8a684eeed1)
+        ;
+
+        
+    
+    
+            var circle_marker_c11f8193a76d2c6cf2e83c352b2b698e = L.circleMarker(
+                [24.60852, 121.82735],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_a32e9d3b5483ad0ecebdce2d97edf212 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_669633cb1005258560da44169b1dc001 = $(`<div id="html_669633cb1005258560da44169b1dc001" style="width: 100.0%; height: 100.0%;"><b>蘇澳新站</b><br>遺失件數：5<br>遺失率：0.8 /十萬人次<br>高價值佔比：80%</div>`)[0];
+                popup_a32e9d3b5483ad0ecebdce2d97edf212.setContent(html_669633cb1005258560da44169b1dc001);
+            
+        
+
+        circle_marker_c11f8193a76d2c6cf2e83c352b2b698e.bindPopup(popup_a32e9d3b5483ad0ecebdce2d97edf212)
+        ;
+
+        
+    
+    
+            var circle_marker_3a0ae5db770acca8518a4d0bfd12412c = L.circleMarker(
+                [24.23461, 120.7106],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_5d12e2cc33d69d6d79b0961459aa73a8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_28c84b31794b8009d33e8594b39e5eeb = $(`<div id="html_28c84b31794b8009d33e8594b39e5eeb" style="width: 100.0%; height: 100.0%;"><b>栗林站</b><br>遺失件數：5<br>遺失率：0.7 /十萬人次<br>高價值佔比：20%</div>`)[0];
+                popup_5d12e2cc33d69d6d79b0961459aa73a8.setContent(html_28c84b31794b8009d33e8594b39e5eeb);
+            
+        
+
+        circle_marker_3a0ae5db770acca8518a4d0bfd12412c.bindPopup(popup_5d12e2cc33d69d6d79b0961459aa73a8)
+        ;
+
+        
+    
+    
+            var circle_marker_032800d9daffe8a28c51efd4ed30bc7f = L.circleMarker(
+                [23.36626, 120.36058],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_54c7ed1890474409bd7e7867d0800e35 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4ded9beb789983867416f650e2714731 = $(`<div id="html_4ded9beb789983867416f650e2714731" style="width: 100.0%; height: 100.0%;"><b>後壁站</b><br>遺失件數：5<br>遺失率：1.0 /十萬人次<br>高價值佔比：40%</div>`)[0];
+                popup_54c7ed1890474409bd7e7867d0800e35.setContent(html_4ded9beb789983867416f650e2714731);
+            
+        
+
+        circle_marker_032800d9daffe8a28c51efd4ed30bc7f.bindPopup(popup_54c7ed1890474409bd7e7867d0800e35)
+        ;
+
+        
+    
+    
+            var circle_marker_465804fc01f1f503004b08b9f43395ca = L.circleMarker(
+                [24.80657, 121.0034],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.459674775249769, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_1b318b61e8d59311c465f8bbf5d6e8c9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_76fd1c73a55eba22215a4a9a85f2059e = $(`<div id="html_76fd1c73a55eba22215a4a9a85f2059e" style="width: 100.0%; height: 100.0%;"><b>千甲站</b><br>遺失件數：5<br>遺失率：1.9 /十萬人次<br>高價值佔比：40%</div>`)[0];
+                popup_1b318b61e8d59311c465f8bbf5d6e8c9.setContent(html_76fd1c73a55eba22215a4a9a85f2059e);
+            
+        
+
+        circle_marker_465804fc01f1f503004b08b9f43395ca.bindPopup(popup_1b318b61e8d59311c465f8bbf5d6e8c9)
+        ;
+
+        
+    
+    
+            var circle_marker_be948cf611c96412a0de3851461a1d5a = L.circleMarker(
+                [24.70528, 121.77409],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.2, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_682abf1aeb77c04a045a9a0dd9d1b8fd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1fea638e4f1e20d7fe021b79fce3fbb9 = $(`<div id="html_1fea638e4f1e20d7fe021b79fce3fbb9" style="width: 100.0%; height: 100.0%;"><b>二結站</b><br>遺失件數：4<br>遺失率：3.2 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_682abf1aeb77c04a045a9a0dd9d1b8fd.setContent(html_1fea638e4f1e20d7fe021b79fce3fbb9);
+            
+        
+
+        circle_marker_be948cf611c96412a0de3851461a1d5a.bindPopup(popup_682abf1aeb77c04a045a9a0dd9d1b8fd)
+        ;
+
+        
+    
+    
+            var circle_marker_76af96c64e18e254ffea35753527c8dc = L.circleMarker(
+                [23.04566, 121.1643],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.2, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_90a226af8b0cc8dc2b9794eaef36b607 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ae23687b8164d1b830a3aa70991a240e = $(`<div id="html_ae23687b8164d1b830a3aa70991a240e" style="width: 100.0%; height: 100.0%;"><b>關山站</b><br>遺失件數：4<br>遺失率：0.8 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_90a226af8b0cc8dc2b9794eaef36b607.setContent(html_ae23687b8164d1b830a3aa70991a240e);
+            
+        
+
+        circle_marker_76af96c64e18e254ffea35753527c8dc.bindPopup(popup_90a226af8b0cc8dc2b9794eaef36b607)
+        ;
+
+        
+    
+    
+            var circle_marker_ed0179c8be191d5d417419d87c6530e8 = L.circleMarker(
+                [24.10867, 120.62244],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f0fdac49d0537dcc952ea3012a2a8690 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_cfc94c13fdc230f51e78ad7cb8b19a64 = $(`<div id="html_cfc94c13fdc230f51e78ad7cb8b19a64" style="width: 100.0%; height: 100.0%;"><b>烏日站</b><br>遺失件數：3<br>遺失率：0.5 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_f0fdac49d0537dcc952ea3012a2a8690.setContent(html_cfc94c13fdc230f51e78ad7cb8b19a64);
+            
+        
+
+        circle_marker_ed0179c8be191d5d417419d87c6530e8.bindPopup(popup_f0fdac49d0537dcc952ea3012a2a8690)
+        ;
+
+        
+    
+    
+            var circle_marker_860bc69c539b93ee84bf1e744271391a = L.circleMarker(
+                [24.76311, 120.91388],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_2b6eb97667dc0cfbc6efcda82e87f9e1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_dae203f169a7c277c9ee34d8ad5a17e1 = $(`<div id="html_dae203f169a7c277c9ee34d8ad5a17e1" style="width: 100.0%; height: 100.0%;"><b>香山站</b><br>遺失件數：3<br>遺失率：0.5 /十萬人次<br>高價值佔比：67%</div>`)[0];
+                popup_2b6eb97667dc0cfbc6efcda82e87f9e1.setContent(html_dae203f169a7c277c9ee34d8ad5a17e1);
+            
+        
+
+        circle_marker_860bc69c539b93ee84bf1e744271391a.bindPopup(popup_2b6eb97667dc0cfbc6efcda82e87f9e1)
+        ;
+
+        
+    
+    
+            var circle_marker_6405f8b93d15542ecf6e489a8ef6050c = L.circleMarker(
+                [25.08702, 121.82743],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f7a08603d02c790af382c0d8adb489eb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_dfa14264d53312e034b5c39c0ea14ebe = $(`<div id="html_dfa14264d53312e034b5c39c0ea14ebe" style="width: 100.0%; height: 100.0%;"><b>猴硐站</b><br>遺失件數：3<br>遺失率：0.5 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_f7a08603d02c790af382c0d8adb489eb.setContent(html_dfa14264d53312e034b5c39c0ea14ebe);
+            
+        
+
+        circle_marker_6405f8b93d15542ecf6e489a8ef6050c.bindPopup(popup_f7a08603d02c790af382c0d8adb489eb)
+        ;
+
+        
+    
+    
+            var circle_marker_c2679eb2b84bca76167ed0492dba5716 = L.circleMarker(
+                [24.03253, 121.60166],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_899801f5a09d3a4443905ff042e58b9d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_e7f29fce5fdf70c4ef5b4a7984ef6226 = $(`<div id="html_e7f29fce5fdf70c4ef5b4a7984ef6226" style="width: 100.0%; height: 100.0%;"><b>北埔站</b><br>遺失件數：3<br>遺失率：2.3 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_899801f5a09d3a4443905ff042e58b9d.setContent(html_e7f29fce5fdf70c4ef5b4a7984ef6226);
+            
+        
+
+        circle_marker_c2679eb2b84bca76167ed0492dba5716.bindPopup(popup_899801f5a09d3a4443905ff042e58b9d)
+        ;
+
+        
+    
+    
+            var circle_marker_a76e79af226c26de3311ff0b2435eaff = L.circleMarker(
+                [22.76426, 121.09356],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_34d31d6a9d931f9a7169ca50d5095696 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_263032abbb80f8adf389c641557df2fb = $(`<div id="html_263032abbb80f8adf389c641557df2fb" style="width: 100.0%; height: 100.0%;"><b>康樂站</b><br>遺失件數：3<br>遺失率：24.7 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_34d31d6a9d931f9a7169ca50d5095696.setContent(html_263032abbb80f8adf389c641557df2fb);
+            
+        
+
+        circle_marker_a76e79af226c26de3311ff0b2435eaff.bindPopup(popup_34d31d6a9d931f9a7169ca50d5095696)
+        ;
+
+        
+    
+    
+            var circle_marker_1fe95ebc80def57521c0fa91a468c0a2 = L.circleMarker(
+                [23.27762, 120.32252],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_d26131cb5332f0c72a7593a49566aff6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6f103cd55abdf71e008f2d2061444a7e = $(`<div id="html_6f103cd55abdf71e008f2d2061444a7e" style="width: 100.0%; height: 100.0%;"><b>柳營站</b><br>遺失件數：3<br>遺失率：0.4 /十萬人次<br>高價值佔比：67%</div>`)[0];
+                popup_d26131cb5332f0c72a7593a49566aff6.setContent(html_6f103cd55abdf71e008f2d2061444a7e);
+            
+        
+
+        circle_marker_1fe95ebc80def57521c0fa91a468c0a2.bindPopup(popup_d26131cb5332f0c72a7593a49566aff6)
+        ;
+
+        
+    
+    
+            var circle_marker_50b3d09a5732e64dcf18ae336375fc80 = L.circleMarker(
+                [24.78731, 120.92844],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9052558883257653, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_bbcf51b201a4fbde381902b3b089f10f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c69219edced70050d5f8da0bd3ba8882 = $(`<div id="html_c69219edced70050d5f8da0bd3ba8882" style="width: 100.0%; height: 100.0%;"><b>三姓橋站</b><br>遺失件數：3<br>遺失率：0.3 /十萬人次<br>高價值佔比：33%</div>`)[0];
+                popup_bbcf51b201a4fbde381902b3b089f10f.setContent(html_c69219edced70050d5f8da0bd3ba8882);
+            
+        
+
+        circle_marker_50b3d09a5732e64dcf18ae336375fc80.bindPopup(popup_bbcf51b201a4fbde381902b3b089f10f)
+        ;
+
+        
+    
+    
+            var circle_marker_5042946eb29cdaa494a91262fcf034a4 = L.circleMarker(
+                [23.92817, 120.57167],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_fbefc0d2fb4f11adfb42a35794931a2f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9c174d4996d65475918ad8185c4a98e6 = $(`<div id="html_9c174d4996d65475918ad8185c4a98e6" style="width: 100.0%; height: 100.0%;"><b>永靖站</b><br>遺失件數：2<br>遺失率：0.4 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_fbefc0d2fb4f11adfb42a35794931a2f.setContent(html_9c174d4996d65475918ad8185c4a98e6);
+            
+        
+
+        circle_marker_5042946eb29cdaa494a91262fcf034a4.bindPopup(popup_fbefc0d2fb4f11adfb42a35794931a2f)
+        ;
+
+        
+    
+    
+            var circle_marker_3ad64e784723f5a9b7300adaf63c8a0b = L.circleMarker(
+                [24.60429, 120.82637],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_37ac5cdf486a02a51cf0f7c96e25f0f5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_20ecdd8b88cfb76ea8b850de23f46509 = $(`<div id="html_20ecdd8b88cfb76ea8b850de23f46509" style="width: 100.0%; height: 100.0%;"><b>豐富站</b><br>遺失件數：2<br>遺失率：0.2 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_37ac5cdf486a02a51cf0f7c96e25f0f5.setContent(html_20ecdd8b88cfb76ea8b850de23f46509);
+            
+        
+
+        circle_marker_3ad64e784723f5a9b7300adaf63c8a0b.bindPopup(popup_37ac5cdf486a02a51cf0f7c96e25f0f5)
+        ;
+
+        
+    
+    
+            var circle_marker_b376dc91fc2cae647e93f0273f9e5ab2 = L.circleMarker(
+                [25.10231, 121.74031],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f2038b569a8a4e53ef33b78fa80fca77 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8296192a054e5340f0c7cc2e29706a70 = $(`<div id="html_8296192a054e5340f0c7cc2e29706a70" style="width: 100.0%; height: 100.0%;"><b>暖暖站</b><br>遺失件數：2<br>遺失率：0.4 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_f2038b569a8a4e53ef33b78fa80fca77.setContent(html_8296192a054e5340f0c7cc2e29706a70);
+            
+        
+
+        circle_marker_b376dc91fc2cae647e93f0273f9e5ab2.bindPopup(popup_f2038b569a8a4e53ef33b78fa80fca77)
+        ;
+
+        
+    
+    
+            var circle_marker_d10e84d17db9f9cb520e07d137b2a253 = L.circleMarker(
+                [25.13528, 121.80286],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_bdeced69af2b1029ba07e5cceac88ee7 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ffe3ee36ddff51b5b8d2263e95ee81ff = $(`<div id="html_ffe3ee36ddff51b5b8d2263e95ee81ff" style="width: 100.0%; height: 100.0%;"><b>八斗子站</b><br>遺失件數：2<br>遺失率：1.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_bdeced69af2b1029ba07e5cceac88ee7.setContent(html_ffe3ee36ddff51b5b8d2263e95ee81ff);
+            
+        
+
+        circle_marker_d10e84d17db9f9cb520e07d137b2a253.bindPopup(popup_bdeced69af2b1029ba07e5cceac88ee7)
+        ;
+
+        
+    
+    
+            var circle_marker_415e9371a0a75aaa5f05c4b589a7a6cc = L.circleMarker(
+                [25.01595, 121.94471],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_034747ab01f046df28d758ccb697fe9e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_54c00c78ceff23200e465ef37d2c94df = $(`<div id="html_54c00c78ceff23200e465ef37d2c94df" style="width: 100.0%; height: 100.0%;"><b>福隆站</b><br>遺失件數：2<br>遺失率：0.2 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_034747ab01f046df28d758ccb697fe9e.setContent(html_54c00c78ceff23200e465ef37d2c94df);
+            
+        
+
+        circle_marker_415e9371a0a75aaa5f05c4b589a7a6cc.bindPopup(popup_034747ab01f046df28d758ccb697fe9e)
+        ;
+
+        
+    
+    
+            var circle_marker_a2a02904f938502b9169ae26c39ea1c7 = L.circleMarker(
+                [25.06555, 121.82257],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_49e0d6a78972388807745b84d96c0689 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9be5ff1bcb58c41daf3ebb9c7c60f63d = $(`<div id="html_9be5ff1bcb58c41daf3ebb9c7c60f63d" style="width: 100.0%; height: 100.0%;"><b>三貂嶺站</b><br>遺失件數：2<br>遺失率：0.9 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_49e0d6a78972388807745b84d96c0689.setContent(html_9be5ff1bcb58c41daf3ebb9c7c60f63d);
+            
+        
+
+        circle_marker_a2a02904f938502b9169ae26c39ea1c7.bindPopup(popup_49e0d6a78972388807745b84d96c0689)
+        ;
+
+        
+    
+    
+            var circle_marker_dc39155b723914211c3199d3277eaa60 = L.circleMarker(
+                [25.03445, 121.76349],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_699339a597580586bbf64c61224a8042 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a78c1be61e2a05d49e5f59bbd845c483 = $(`<div id="html_a78c1be61e2a05d49e5f59bbd845c483" style="width: 100.0%; height: 100.0%;"><b>望古站</b><br>遺失件數：2<br>遺失率：7.3 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_699339a597580586bbf64c61224a8042.setContent(html_a78c1be61e2a05d49e5f59bbd845c483);
+            
+        
+
+        circle_marker_dc39155b723914211c3199d3277eaa60.bindPopup(popup_699339a597580586bbf64c61224a8042)
+        ;
+
+        
+    
+    
+            var circle_marker_68da3c6e9dc398f1426f772abf6a32df = L.circleMarker(
+                [23.74634, 121.44701],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_6a73d519914eb034cbc77656194dea3f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_639254b26147403eff9a07d385d6cadb = $(`<div id="html_639254b26147403eff9a07d385d6cadb" style="width: 100.0%; height: 100.0%;"><b>鳳林站</b><br>遺失件數：2<br>遺失率：0.6 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_6a73d519914eb034cbc77656194dea3f.setContent(html_639254b26147403eff9a07d385d6cadb);
+            
+        
+
+        circle_marker_68da3c6e9dc398f1426f772abf6a32df.bindPopup(popup_6a73d519914eb034cbc77656194dea3f)
+        ;
+
+        
+    
+    
+            var circle_marker_bc900ef2a99f7da6e999579047743e38 = L.circleMarker(
+                [22.63931, 120.29414],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_d3962a444492a3671107619bf547adc3 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b934a719671a8f8bd17e8fea3e22b038 = $(`<div id="html_b934a719671a8f8bd17e8fea3e22b038" style="width: 100.0%; height: 100.0%;"><b>三塊厝站</b><br>遺失件數：2<br>遺失率：0.3 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_d3962a444492a3671107619bf547adc3.setContent(html_b934a719671a8f8bd17e8fea3e22b038);
+            
+        
+
+        circle_marker_bc900ef2a99f7da6e999579047743e38.bindPopup(popup_d3962a444492a3671107619bf547adc3)
+        ;
+
+        
+    
+    
+            var circle_marker_3123cc91bb22932e67e1bb4d04e72f90 = L.circleMarker(
+                [22.61883, 121.00492],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f5dfbee9c11aa14a744d7b66533b21c8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a0080f38b9f8f081d34e38d61cdf1c01 = $(`<div id="html_a0080f38b9f8f081d34e38d61cdf1c01" style="width: 100.0%; height: 100.0%;"><b>太麻里站</b><br>遺失件數：2<br>遺失率：1.0 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_f5dfbee9c11aa14a744d7b66533b21c8.setContent(html_a0080f38b9f8f081d34e38d61cdf1c01);
+            
+        
+
+        circle_marker_3123cc91bb22932e67e1bb4d04e72f90.bindPopup(popup_f5dfbee9c11aa14a744d7b66533b21c8)
+        ;
+
+        
+    
+    
+            var circle_marker_3941f21a908daa6f63a2ee6e40af4c65 = L.circleMarker(
+                [23.12613, 121.21949],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_dde65e95c8ed849dc5e92a17850048ed = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_420d639c31f69e23d2b665a5476b21e5 = $(`<div id="html_420d639c31f69e23d2b665a5476b21e5" style="width: 100.0%; height: 100.0%;"><b>池上站</b><br>遺失件數：2<br>遺失率：0.3 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_dde65e95c8ed849dc5e92a17850048ed.setContent(html_420d639c31f69e23d2b665a5476b21e5);
+            
+        
+
+        circle_marker_3941f21a908daa6f63a2ee6e40af4c65.bindPopup(popup_dde65e95c8ed849dc5e92a17850048ed)
+        ;
+
+        
+    
+    
+            var circle_marker_d9984ae666454cc52a8359a6dc146995 = L.circleMarker(
+                [25.09294, 121.71415],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_6d6c021c636c306bae94e0b27885d9a8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6faa3b7739af7ae4a887397a4f339e4f = $(`<div id="html_6faa3b7739af7ae4a887397a4f339e4f" style="width: 100.0%; height: 100.0%;"><b>七堵站</b><br>遺失件數：2<br>遺失率：0.0 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_6d6c021c636c306bae94e0b27885d9a8.setContent(html_6faa3b7739af7ae4a887397a4f339e4f);
+            
+        
+
+        circle_marker_d9984ae666454cc52a8359a6dc146995.bindPopup(popup_6d6c021c636c306bae94e0b27885d9a8)
+        ;
+
+        
+    
+    
+            var circle_marker_221c73a9b681cfff52790e6b7f754b5a = L.circleMarker(
+                [23.89573, 120.58077],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_b802a4455843add2409f42d5f798dd66 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d23a7ba743e91894c538b934743644cb = $(`<div id="html_d23a7ba743e91894c538b934743644cb" style="width: 100.0%; height: 100.0%;"><b>社頭站</b><br>遺失件數：2<br>遺失率：0.2 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_b802a4455843add2409f42d5f798dd66.setContent(html_d23a7ba743e91894c538b934743644cb);
+            
+        
+
+        circle_marker_221c73a9b681cfff52790e6b7f754b5a.bindPopup(popup_b802a4455843add2409f42d5f798dd66)
+        ;
+
+        
+    
+    
+            var circle_marker_1b95eb878e5f5f3f6772d3385789950c = L.circleMarker(
+                [24.19572, 120.70398],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_837cffbc708ecd4aeea3cdf78edf5e93 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_539d8dddb362aeb5c8986391aad7812f = $(`<div id="html_539d8dddb362aeb5c8986391aad7812f" style="width: 100.0%; height: 100.0%;"><b>頭家厝站</b><br>遺失件數：2<br>遺失率：0.4 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_837cffbc708ecd4aeea3cdf78edf5e93.setContent(html_539d8dddb362aeb5c8986391aad7812f);
+            
+        
+
+        circle_marker_1b95eb878e5f5f3f6772d3385789950c.bindPopup(popup_837cffbc708ecd4aeea3cdf78edf5e93)
+        ;
+
+        
+    
+    
+            var circle_marker_78c01ee9235c5abdf3f7a2b73aa02262 = L.circleMarker(
+                [25.06405, 121.65237],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_471b7798f55bf0013e0c88269eeae735 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_34ad851db6583f22918cb1af96314ffb = $(`<div id="html_34ad851db6583f22918cb1af96314ffb" style="width: 100.0%; height: 100.0%;"><b>汐科站</b><br>遺失件數：2<br>遺失率：0.0 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_471b7798f55bf0013e0c88269eeae735.setContent(html_34ad851db6583f22918cb1af96314ffb);
+            
+        
+
+        circle_marker_78c01ee9235c5abdf3f7a2b73aa02262.bindPopup(popup_471b7798f55bf0013e0c88269eeae735)
+        ;
+
+        
+    
+    
+            var circle_marker_d2cbab2db82739fb58f659580129439b = L.circleMarker(
+                [23.75967, 120.61499],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_c5b1ea7160ca231752dc5a7a7c82dde7 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a07e93e097322a9005d4565dda597313 = $(`<div id="html_a07e93e097322a9005d4565dda597313" style="width: 100.0%; height: 100.0%;"><b>林內站</b><br>遺失件數：2<br>遺失率：0.3 /十萬人次<br>高價值佔比：50%</div>`)[0];
+                popup_c5b1ea7160ca231752dc5a7a7c82dde7.setContent(html_a07e93e097322a9005d4565dda597313);
+            
+        
+
+        circle_marker_d2cbab2db82739fb58f659580129439b.bindPopup(popup_c5b1ea7160ca231752dc5a7a7c82dde7)
+        ;
+
+        
+    
+    
+            var circle_marker_f330b1dd39915005db15896436bb8dcb = L.circleMarker(
+                [23.90769, 121.5295],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.555634918610405, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_887e4e574a359b5124b8734db468bdad = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_58e6897bddb80bbfabff9407f45d6136 = $(`<div id="html_58e6897bddb80bbfabff9407f45d6136" style="width: 100.0%; height: 100.0%;"><b>志學站</b><br>遺失件數：2<br>遺失率：0.5 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_887e4e574a359b5124b8734db468bdad.setContent(html_58e6897bddb80bbfabff9407f45d6136);
+            
+        
+
+        circle_marker_f330b1dd39915005db15896436bb8dcb.bindPopup(popup_887e4e574a359b5124b8734db468bdad)
+        ;
+
+        
+    
+    
+            var circle_marker_080aeb97df2bb4db4e6c4613582d82a6 = L.circleMarker(
+                [24.93445, 121.08308],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f302fe90f17507750da7dd6a7cac6698 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ec41c34f42822bd7e5b67391716779c1 = $(`<div id="html_ec41c34f42822bd7e5b67391716779c1" style="width: 100.0%; height: 100.0%;"><b>富岡站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_f302fe90f17507750da7dd6a7cac6698.setContent(html_ec41c34f42822bd7e5b67391716779c1);
+            
+        
+
+        circle_marker_080aeb97df2bb4db4e6c4613582d82a6.bindPopup(popup_f302fe90f17507750da7dd6a7cac6698)
+        ;
+
+        
+    
+    
+            var circle_marker_d5f4bce044ddc3dc4adf30822ba4994d = L.circleMarker(
+                [23.60112, 120.45585],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_bd60e3665457d979d07151f9ef2ddaf3 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_89c9b7b6572c810cc7b35fd172083461 = $(`<div id="html_89c9b7b6572c810cc7b35fd172083461" style="width: 100.0%; height: 100.0%;"><b>大林站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_bd60e3665457d979d07151f9ef2ddaf3.setContent(html_89c9b7b6572c810cc7b35fd172083461);
+            
+        
+
+        circle_marker_d5f4bce044ddc3dc4adf30822ba4994d.bindPopup(popup_bd60e3665457d979d07151f9ef2ddaf3)
+        ;
+
+        
+    
+    
+            var circle_marker_5227eb63afc16479dd8c4a97240204a3 = L.circleMarker(
+                [24.61621, 120.78731],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_0659c53a4d063a914f200b9989e8e423 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_55dd72bea0399bd619034abf9e23d5b5 = $(`<div id="html_55dd72bea0399bd619034abf9e23d5b5" style="width: 100.0%; height: 100.0%;"><b>後龍站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_0659c53a4d063a914f200b9989e8e423.setContent(html_55dd72bea0399bd619034abf9e23d5b5);
+            
+        
+
+        circle_marker_5227eb63afc16479dd8c4a97240204a3.bindPopup(popup_0659c53a4d063a914f200b9989e8e423)
+        ;
+
+        
+    
+    
+            var circle_marker_c180f0c219fb154cae732b66e4669f1f = L.circleMarker(
+                [24.93109, 121.06751],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_3009486737a13da55a08689853c0682e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_bc317aea6e81a36d9f3fdd9b11e08373 = $(`<div id="html_bc317aea6e81a36d9f3fdd9b11e08373" style="width: 100.0%; height: 100.0%;"><b>新富站</b><br>遺失件數：1<br>遺失率：1.0 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_3009486737a13da55a08689853c0682e.setContent(html_bc317aea6e81a36d9f3fdd9b11e08373);
+            
+        
+
+        circle_marker_c180f0c219fb154cae732b66e4669f1f.bindPopup(popup_3009486737a13da55a08689853c0682e)
+        ;
+
+        
+    
+    
+            var circle_marker_f554967e3b10ce23387b8aa5ecaf8ded = L.circleMarker(
+                [23.41344, 120.38654],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_bddc3e83da35295dc383d21709d3cc1e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_48ea7e330aadea3fa6cd6d1f4f371100 = $(`<div id="html_48ea7e330aadea3fa6cd6d1f4f371100" style="width: 100.0%; height: 100.0%;"><b>南靖站</b><br>遺失件數：1<br>遺失率：0.5 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_bddc3e83da35295dc383d21709d3cc1e.setContent(html_48ea7e330aadea3fa6cd6d1f4f371100);
+            
+        
+
+        circle_marker_f554967e3b10ce23387b8aa5ecaf8ded.bindPopup(popup_bddc3e83da35295dc383d21709d3cc1e)
+        ;
+
+        
+    
+    
+            var circle_marker_e4dab36ad4e0283c980efe5c3758feaf = L.circleMarker(
+                [23.49981, 120.44851],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_0f384f5639c5a9e7c3ead5f62db8d27f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a558220559be6b2b890ae1b686fe4559 = $(`<div id="html_a558220559be6b2b890ae1b686fe4559" style="width: 100.0%; height: 100.0%;"><b>嘉北站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_0f384f5639c5a9e7c3ead5f62db8d27f.setContent(html_a558220559be6b2b890ae1b686fe4559);
+            
+        
+
+        circle_marker_e4dab36ad4e0283c980efe5c3758feaf.bindPopup(popup_0f384f5639c5a9e7c3ead5f62db8d27f)
+        ;
+
+        
+    
+    
+            var circle_marker_71ddba3483d2ed41c3ce8f12375ac17f = L.circleMarker(
+                [23.79845, 120.64211],
+                {"bubblingMouseEvents": true, "color": "#f03b20", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f03b20", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_eccf94b3cfeef1dc33da8e45d2619ac4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8bbc72e5599b6b092090e0886d7aaff9 = $(`<div id="html_8bbc72e5599b6b092090e0886d7aaff9" style="width: 100.0%; height: 100.0%;"><b>源泉站</b><br>遺失件數：1<br>遺失率：4.2 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_eccf94b3cfeef1dc33da8e45d2619ac4.setContent(html_8bbc72e5599b6b092090e0886d7aaff9);
+            
+        
+
+        circle_marker_71ddba3483d2ed41c3ce8f12375ac17f.bindPopup(popup_eccf94b3cfeef1dc33da8e45d2619ac4)
+        ;
+
+        
+    
+    
+            var circle_marker_122c692e07ac47420f363638fb9d0ecc = L.circleMarker(
+                [24.02502, 120.53742],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_99e59b6b0d3c07081e680c0a5b648cb1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f8692ce4919d92d79103fb33e18cd403 = $(`<div id="html_f8692ce4919d92d79103fb33e18cd403" style="width: 100.0%; height: 100.0%;"><b>花壇站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_99e59b6b0d3c07081e680c0a5b648cb1.setContent(html_f8692ce4919d92d79103fb33e18cd403);
+            
+        
+
+        circle_marker_122c692e07ac47420f363638fb9d0ecc.bindPopup(popup_99e59b6b0d3c07081e680c0a5b648cb1)
+        ;
+
+        
+    
+    
+            var circle_marker_4cc19792e3d7d70feb00a16c9c0e2876 = L.circleMarker(
+                [24.14887, 120.69784],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_27708fc269a99ce63baba5bda0b19947 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_12074642faec217c73cdf36bc4ef74b8 = $(`<div id="html_12074642faec217c73cdf36bc4ef74b8" style="width: 100.0%; height: 100.0%;"><b>精武站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_27708fc269a99ce63baba5bda0b19947.setContent(html_12074642faec217c73cdf36bc4ef74b8);
+            
+        
+
+        circle_marker_4cc19792e3d7d70feb00a16c9c0e2876.bindPopup(popup_27708fc269a99ce63baba5bda0b19947)
+        ;
+
+        
+    
+    
+            var circle_marker_2298301e290af4dca1418654d6f768a2 = L.circleMarker(
+                [24.42066, 120.77393],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_c220e019059a9921b12f3ff0648d67b1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3e4da42311cb419226ddbf0e319bac4c = $(`<div id="html_3e4da42311cb419226ddbf0e319bac4c" style="width: 100.0%; height: 100.0%;"><b>三義站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_c220e019059a9921b12f3ff0648d67b1.setContent(html_3e4da42311cb419226ddbf0e319bac4c);
+            
+        
+
+        circle_marker_2298301e290af4dca1418654d6f768a2.bindPopup(popup_c220e019059a9921b12f3ff0648d67b1)
+        ;
+
+        
+    
+    
+            var circle_marker_2ce970ebefb5e91b3e2c88312b31fb7e = L.circleMarker(
+                [24.34448, 120.62702],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_3985ac6d04186ec752d70a4da908f5df = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d31bb75402aa3e26f77aae26c4f942f6 = $(`<div id="html_d31bb75402aa3e26f77aae26c4f942f6" style="width: 100.0%; height: 100.0%;"><b>大甲站</b><br>遺失件數：1<br>遺失率：0.0 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_3985ac6d04186ec752d70a4da908f5df.setContent(html_d31bb75402aa3e26f77aae26c4f942f6);
+            
+        
+
+        circle_marker_2ce970ebefb5e91b3e2c88312b31fb7e.bindPopup(popup_3985ac6d04186ec752d70a4da908f5df)
+        ;
+
+        
+    
+    
+            var circle_marker_3d67bd33fbbbd094e1fcbef0b3302904 = L.circleMarker(
+                [24.26364, 120.56918],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_d7a4236fe41e50a678101e185d53f0ce = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_bcb660379e34b334ef298bb3ed5d4dd4 = $(`<div id="html_bcb660379e34b334ef298bb3ed5d4dd4" style="width: 100.0%; height: 100.0%;"><b>清水站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_d7a4236fe41e50a678101e185d53f0ce.setContent(html_bcb660379e34b334ef298bb3ed5d4dd4);
+            
+        
+
+        circle_marker_3d67bd33fbbbd094e1fcbef0b3302904.bindPopup(popup_d7a4236fe41e50a678101e185d53f0ce)
+        ;
+
+        
+    
+    
+            var circle_marker_4fcdf504cb467606ee2ef11b15bf38ad = L.circleMarker(
+                [24.19748, 120.54335],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_bf826e369cb5ea3a450ee5ffd0812291 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4835af243ccde4b7a2d35b7e916e5857 = $(`<div id="html_4835af243ccde4b7a2d35b7e916e5857" style="width: 100.0%; height: 100.0%;"><b>龍井站</b><br>遺失件數：1<br>遺失率：0.3 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_bf826e369cb5ea3a450ee5ffd0812291.setContent(html_4835af243ccde4b7a2d35b7e916e5857);
+            
+        
+
+        circle_marker_4fcdf504cb467606ee2ef11b15bf38ad.bindPopup(popup_bf826e369cb5ea3a450ee5ffd0812291)
+        ;
+
+        
+    
+    
+            var circle_marker_32c93e5fc46c5cd56acf5847f8724630 = L.circleMarker(
+                [24.11911, 120.64795],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_61e4ba39b95718e55fa4c10f30b39c63 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_747eee4eafb341d39314bdaa180f8538 = $(`<div id="html_747eee4eafb341d39314bdaa180f8538" style="width: 100.0%; height: 100.0%;"><b>大慶站</b><br>遺失件數：1<br>遺失率：0.0 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_61e4ba39b95718e55fa4c10f30b39c63.setContent(html_747eee4eafb341d39314bdaa180f8538);
+            
+        
+
+        circle_marker_32c93e5fc46c5cd56acf5847f8724630.bindPopup(popup_61e4ba39b95718e55fa4c10f30b39c63)
+        ;
+
+        
+    
+    
+            var circle_marker_4ef24e1054a7cce1aee0974ae95b3930 = L.circleMarker(
+                [23.19271, 120.31917],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_fb1da1da7de7f0cbfe4b20d562a74ca7 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8cedb8d165c11eff241e0e3ced1731f0 = $(`<div id="html_8cedb8d165c11eff241e0e3ced1731f0" style="width: 100.0%; height: 100.0%;"><b>隆田站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_fb1da1da7de7f0cbfe4b20d562a74ca7.setContent(html_8cedb8d165c11eff241e0e3ced1731f0);
+            
+        
+
+        circle_marker_4ef24e1054a7cce1aee0974ae95b3930.bindPopup(popup_fb1da1da7de7f0cbfe4b20d562a74ca7)
+        ;
+
+        
+    
+    
+            var circle_marker_2352388f0322523d60b5eda46dc2b745 = L.circleMarker(
+                [25.13754, 121.79997],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_bfc4b190e66fc2f150104a24f7726d9d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4f23f4097e27f341bbf67f6fbb3bf434 = $(`<div id="html_4f23f4097e27f341bbf67f6fbb3bf434" style="width: 100.0%; height: 100.0%;"><b>海科館站</b><br>遺失件數：1<br>遺失率：1.3 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_bfc4b190e66fc2f150104a24f7726d9d.setContent(html_4f23f4097e27f341bbf67f6fbb3bf434);
+            
+        
+
+        circle_marker_2352388f0322523d60b5eda46dc2b745.bindPopup(popup_bfc4b190e66fc2f150104a24f7726d9d)
+        ;
+
+        
+    
+    
+            var circle_marker_5670075fdde1679573d58dae7ed7c8f0 = L.circleMarker(
+                [24.63633, 121.79211],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_1e6434f23acfaaf7c5b74c396e4348c6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4cf8d12cf7eb13f685de896a60717dfe = $(`<div id="html_4cf8d12cf7eb13f685de896a60717dfe" style="width: 100.0%; height: 100.0%;"><b>冬山站</b><br>遺失件數：1<br>遺失率：0.2 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_1e6434f23acfaaf7c5b74c396e4348c6.setContent(html_4cf8d12cf7eb13f685de896a60717dfe);
+            
+        
+
+        circle_marker_5670075fdde1679573d58dae7ed7c8f0.bindPopup(popup_1e6434f23acfaaf7c5b74c396e4348c6)
+        ;
+
+        
+    
+    
+            var circle_marker_1794c9e2f1db2cc9cfe6e19b0c7ada23 = L.circleMarker(
+                [25.05871, 121.85197],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_e4ccf20355e1e4760262232c5e3b1cb4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_fa9345341c55406db031ba2898bf4384 = $(`<div id="html_fa9345341c55406db031ba2898bf4384" style="width: 100.0%; height: 100.0%;"><b>牡丹站</b><br>遺失件數：1<br>遺失率：0.5 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_e4ccf20355e1e4760262232c5e3b1cb4.setContent(html_fa9345341c55406db031ba2898bf4384);
+            
+        
+
+        circle_marker_1794c9e2f1db2cc9cfe6e19b0c7ada23.bindPopup(popup_e4ccf20355e1e4760262232c5e3b1cb4)
+        ;
+
+        
+    
+    
+            var circle_marker_42ddf567b526bbbf6400b400e50961dc = L.circleMarker(
+                [23.17924, 121.24864],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_a0ceca1d24343f1d3b7a275b106a690a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_90723f54e432ff363c9506f8ab53c031 = $(`<div id="html_90723f54e432ff363c9506f8ab53c031" style="width: 100.0%; height: 100.0%;"><b>富里站</b><br>遺失件數：1<br>遺失率：0.4 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_a0ceca1d24343f1d3b7a275b106a690a.setContent(html_90723f54e432ff363c9506f8ab53c031);
+            
+        
+
+        circle_marker_42ddf567b526bbbf6400b400e50961dc.bindPopup(popup_a0ceca1d24343f1d3b7a275b106a690a)
+        ;
+
+        
+    
+    
+            var circle_marker_5252ebb90e869eb8cd154d802caf5658 = L.circleMarker(
+                [22.65246, 120.50263],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_fb9e6aa98e285c5f6f0cdfea3b81a266 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c0d6e1d3de4f3cf8edaab20c32cd4266 = $(`<div id="html_c0d6e1d3de4f3cf8edaab20c32cd4266" style="width: 100.0%; height: 100.0%;"><b>歸來站</b><br>遺失件數：1<br>遺失率：0.4 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_fb9e6aa98e285c5f6f0cdfea3b81a266.setContent(html_c0d6e1d3de4f3cf8edaab20c32cd4266);
+            
+        
+
+        circle_marker_5252ebb90e869eb8cd154d802caf5658.bindPopup(popup_fb9e6aa98e285c5f6f0cdfea3b81a266)
+        ;
+
+        
+    
+    
+            var circle_marker_87f2b9373628c5a53b6e9e2cee10dddc = L.circleMarker(
+                [22.61643, 120.52661],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_364f238e4c21cdbc3613a26f5eb45ff2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_beba3316d7bf67ba45303cd2349aa4a6 = $(`<div id="html_beba3316d7bf67ba45303cd2349aa4a6" style="width: 100.0%; height: 100.0%;"><b>西勢站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_364f238e4c21cdbc3613a26f5eb45ff2.setContent(html_beba3316d7bf67ba45303cd2349aa4a6);
+            
+        
+
+        circle_marker_87f2b9373628c5a53b6e9e2cee10dddc.bindPopup(popup_364f238e4c21cdbc3613a26f5eb45ff2)
+        ;
+
+        
+    
+    
+            var circle_marker_1e3e054827ececb07471ffd8273a9b9b = L.circleMarker(
+                [22.71022, 121.06068],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_f00dd1cb93cf9dbdc623492b3ec778c5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b37c9acbb6dd17be83904c146e2a3154 = $(`<div id="html_b37c9acbb6dd17be83904c146e2a3154" style="width: 100.0%; height: 100.0%;"><b>知本站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_f00dd1cb93cf9dbdc623492b3ec778c5.setContent(html_b37c9acbb6dd17be83904c146e2a3154);
+            
+        
+
+        circle_marker_1e3e054827ececb07471ffd8273a9b9b.bindPopup(popup_f00dd1cb93cf9dbdc623492b3ec778c5)
+        ;
+
+        
+    
+    
+            var circle_marker_2e8037031b9814377686f0ca168fd747 = L.circleMarker(
+                [22.53161, 120.96721],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_3118c70c0ad438254ebb729c99594bbc = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1a16a6e90138855c4d28300f07160540 = $(`<div id="html_1a16a6e90138855c4d28300f07160540" style="width: 100.0%; height: 100.0%;"><b>金崙站</b><br>遺失件數：1<br>遺失率：0.2 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_3118c70c0ad438254ebb729c99594bbc.setContent(html_1a16a6e90138855c4d28300f07160540);
+            
+        
+
+        circle_marker_2e8037031b9814377686f0ca168fd747.bindPopup(popup_3118c70c0ad438254ebb729c99594bbc)
+        ;
+
+        
+    
+    
+            var circle_marker_5879f13f74c7f2bf0f280a5355a0ab3f = L.circleMarker(
+                [22.64016, 120.39131],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_80e2efe7710a15b7a6e537f3c9cbc187 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c74b422b7b49ef2545a5b919e7d37037 = $(`<div id="html_c74b422b7b49ef2545a5b919e7d37037" style="width: 100.0%; height: 100.0%;"><b>後庄站</b><br>遺失件數：1<br>遺失率：0.2 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_80e2efe7710a15b7a6e537f3c9cbc187.setContent(html_c74b422b7b49ef2545a5b919e7d37037);
+            
+        
+
+        circle_marker_5879f13f74c7f2bf0f280a5355a0ab3f.bindPopup(popup_80e2efe7710a15b7a6e537f3c9cbc187)
+        ;
+
+        
+    
+    
+            var circle_marker_bdea486814468c944b1c5c3a587d89bf = L.circleMarker(
+                [22.63709, 120.32603],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_2284663763784f257bdbfa15182f24f4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_823a66f1b2d5f8ddee6b454d302ca4f1 = $(`<div id="html_823a66f1b2d5f8ddee6b454d302ca4f1" style="width: 100.0%; height: 100.0%;"><b>科工館站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_2284663763784f257bdbfa15182f24f4.setContent(html_823a66f1b2d5f8ddee6b454d302ca4f1);
+            
+        
+
+        circle_marker_bdea486814468c944b1c5c3a587d89bf.bindPopup(popup_2284663763784f257bdbfa15182f24f4)
+        ;
+
+        
+    
+    
+            var circle_marker_054b0be314337242fa36bdbac0a2c578 = L.circleMarker(
+                [22.65185, 120.28148],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_0eb2779850a4835eea0b7678c7f50b6c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a3de30a976102c656cc3790e319a7aa1 = $(`<div id="html_a3de30a976102c656cc3790e319a7aa1" style="width: 100.0%; height: 100.0%;"><b>美術館站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_0eb2779850a4835eea0b7678c7f50b6c.setContent(html_a3de30a976102c656cc3790e319a7aa1);
+            
+        
+
+        circle_marker_054b0be314337242fa36bdbac0a2c578.bindPopup(popup_0eb2779850a4835eea0b7678c7f50b6c)
+        ;
+
+        
+    
+    
+            var circle_marker_d75dc7f95d8f369a4678e1cbe5184b02 = L.circleMarker(
+                [22.91249, 121.13701],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_68649c6bd0cfd52c3d1a39294910e02d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_28804bd98e44d83b89dacb52956848bd = $(`<div id="html_28804bd98e44d83b89dacb52956848bd" style="width: 100.0%; height: 100.0%;"><b>鹿野站</b><br>遺失件數：1<br>遺失率：0.5 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_68649c6bd0cfd52c3d1a39294910e02d.setContent(html_28804bd98e44d83b89dacb52956848bd);
+            
+        
+
+        circle_marker_d75dc7f95d8f369a4678e1cbe5184b02.bindPopup(popup_68649c6bd0cfd52c3d1a39294910e02d)
+        ;
+
+        
+    
+    
+            var circle_marker_05fdac2aeae4e2bb4b95964de54772c8 = L.circleMarker(
+                [22.90446, 120.25284],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_30477827bd598cd6e7e90cf77fa1e0f9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4464c0398321aa21437833ec04746ce7 = $(`<div id="html_4464c0398321aa21437833ec04746ce7" style="width: 100.0%; height: 100.0%;"><b>中洲站</b><br>遺失件數：1<br>遺失率：0.3 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_30477827bd598cd6e7e90cf77fa1e0f9.setContent(html_4464c0398321aa21437833ec04746ce7);
+            
+        
+
+        circle_marker_05fdac2aeae4e2bb4b95964de54772c8.bindPopup(popup_30477827bd598cd6e7e90cf77fa1e0f9)
+        ;
+
+        
+    
+    
+            var circle_marker_9fc51405a5a2c238122c4a607a19dbf8 = L.circleMarker(
+                [24.97281, 121.25826],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_c7841d74593f64ca9335ad9682cb8955 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7b7d0f637295f3703d26aebfad673fbf = $(`<div id="html_7b7d0f637295f3703d26aebfad673fbf" style="width: 100.0%; height: 100.0%;"><b>內壢站</b><br>遺失件數：1<br>遺失率：0.0 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_c7841d74593f64ca9335ad9682cb8955.setContent(html_7b7d0f637295f3703d26aebfad673fbf);
+            
+        
+
+        circle_marker_9fc51405a5a2c238122c4a607a19dbf8.bindPopup(popup_c7841d74593f64ca9335ad9682cb8955)
+        ;
+
+        
+    
+    
+            var circle_marker_9b48716c9849b5d6fb0ae53c63a24f1a = L.circleMarker(
+                [24.98044, 121.40884],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_12181b0ba9786ffa5366378e1a4969d8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4cd602de2cf45a9bc1bb95da9fed972c = $(`<div id="html_4cd602de2cf45a9bc1bb95da9fed972c" style="width: 100.0%; height: 100.0%;"><b>南樹林站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_12181b0ba9786ffa5366378e1a4969d8.setContent(html_4cd602de2cf45a9bc1bb95da9fed972c);
+            
+        
+
+        circle_marker_9b48716c9849b5d6fb0ae53c63a24f1a.bindPopup(popup_12181b0ba9786ffa5366378e1a4969d8)
+        ;
+
+        
+    
+    
+            var circle_marker_e84930ec9055ce5f71817a5467c39a1a = L.circleMarker(
+                [24.51827, 121.83072],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_c9974a66fce14010fb3a5d9707e58d84 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_879fe6c0563b4926143b77abde97d208 = $(`<div id="html_879fe6c0563b4926143b77abde97d208" style="width: 100.0%; height: 100.0%;"><b>東澳站</b><br>遺失件數：1<br>遺失率：0.6 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_c9974a66fce14010fb3a5d9707e58d84.setContent(html_879fe6c0563b4926143b77abde97d208);
+            
+        
+
+        circle_marker_e84930ec9055ce5f71817a5467c39a1a.bindPopup(popup_c9974a66fce14010fb3a5d9707e58d84)
+        ;
+
+        
+    
+    
+            var circle_marker_01b7c890ebdf6d5751a72d0ef715b905 = L.circleMarker(
+                [24.59516, 121.85143],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_38e16ed5853c98ef0c6b6334cb6c0282 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f7d552670f8daf6e0132828f608a8acb = $(`<div id="html_f7d552670f8daf6e0132828f608a8acb" style="width: 100.0%; height: 100.0%;"><b>蘇澳站</b><br>遺失件數：1<br>遺失率：0.2 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_38e16ed5853c98ef0c6b6334cb6c0282.setContent(html_f7d552670f8daf6e0132828f608a8acb);
+            
+        
+
+        circle_marker_01b7c890ebdf6d5751a72d0ef715b905.bindPopup(popup_38e16ed5853c98ef0c6b6334cb6c0282)
+        ;
+
+        
+    
+    
+            var circle_marker_a244b2d030f01bb9dc6eac598413da88 = L.circleMarker(
+                [24.12756, 121.64086],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_3b17e4a3950ce39007664877dc75f2c4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f252c42efbf86d4af4fb586873bb3025 = $(`<div id="html_f252c42efbf86d4af4fb586873bb3025" style="width: 100.0%; height: 100.0%;"><b>新城站</b><br>遺失件數：1<br>遺失率：0.2 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_3b17e4a3950ce39007664877dc75f2c4.setContent(html_f252c42efbf86d4af4fb586873bb3025);
+            
+        
+
+        circle_marker_a244b2d030f01bb9dc6eac598413da88.bindPopup(popup_3b17e4a3950ce39007664877dc75f2c4)
+        ;
+
+        
+    
+    
+            var circle_marker_32047148c264bb146ae07e060cdfa7a5 = L.circleMarker(
+                [24.56843, 121.84458],
+                {"bubblingMouseEvents": true, "color": "#bd0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_8282fbf7cc2ada6c184f82e582cdfd26 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d6acd566ed7b0c4298da98e29a0fd77f = $(`<div id="html_d6acd566ed7b0c4298da98e29a0fd77f" style="width: 100.0%; height: 100.0%;"><b>永樂站</b><br>遺失件數：1<br>遺失率：7.3 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_8282fbf7cc2ada6c184f82e582cdfd26.setContent(html_d6acd566ed7b0c4298da98e29a0fd77f);
+            
+        
+
+        circle_marker_32047148c264bb146ae07e060cdfa7a5.bindPopup(popup_8282fbf7cc2ada6c184f82e582cdfd26)
+        ;
+
+        
+    
+    
+            var circle_marker_f9667ff8f96525d3f451ce3f2c3a2efc = L.circleMarker(
+                [25.10281, 121.76195],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_210363c8c3300289fdc2b1b7898a5e20 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_242e7211ee8015a0269dbb1db9a7c5a4 = $(`<div id="html_242e7211ee8015a0269dbb1db9a7c5a4" style="width: 100.0%; height: 100.0%;"><b>四腳亭站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_210363c8c3300289fdc2b1b7898a5e20.setContent(html_242e7211ee8015a0269dbb1db9a7c5a4);
+            
+        
+
+        circle_marker_f9667ff8f96525d3f451ce3f2c3a2efc.bindPopup(popup_210363c8c3300289fdc2b1b7898a5e20)
+        ;
+
+        
+    
+    
+            var circle_marker_3c84478689856895084f70bbdbb62a7c = L.circleMarker(
+                [22.63879, 120.31494],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_8995d65862d71df16371ae56ce778f9e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_54c480f4f2ba0ffd10704e6227036c1b = $(`<div id="html_54c480f4f2ba0ffd10704e6227036c1b" style="width: 100.0%; height: 100.0%;"><b>民族站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：100%</div>`)[0];
+                popup_8995d65862d71df16371ae56ce778f9e.setContent(html_54c480f4f2ba0ffd10704e6227036c1b);
+            
+        
+
+        circle_marker_3c84478689856895084f70bbdbb62a7c.bindPopup(popup_8995d65862d71df16371ae56ce778f9e)
+        ;
+
+        
+    
+    
+            var circle_marker_14ec1682bd2a258a114092fa78c91945 = L.circleMarker(
+                [22.67445, 120.29401],
+                {"bubblingMouseEvents": true, "color": "#fed976", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed976", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1, "stroke": true, "weight": 1}
+            ).addTo(map_9174edf25a6829701d3a52fc60e17922);
+        
+    
+        var popup_56ab7d390a3eab05888655f0a82d10b4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d9f9a4015957abae038085cddf780b0a = $(`<div id="html_d9f9a4015957abae038085cddf780b0a" style="width: 100.0%; height: 100.0%;"><b>左營站</b><br>遺失件數：1<br>遺失率：0.1 /十萬人次<br>高價值佔比：0%</div>`)[0];
+                popup_56ab7d390a3eab05888655f0a82d10b4.setContent(html_d9f9a4015957abae038085cddf780b0a);
+            
+        
+
+        circle_marker_14ec1682bd2a258a114092fa78c91945.bindPopup(popup_56ab7d390a3eab05888655f0a82d10b4)
+        ;
+
+        
+    
+</script>
+</html>

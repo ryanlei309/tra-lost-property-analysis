@@ -51,13 +51,28 @@ python -m src.run_prototype
 
 ## 資料來源
 - 遺失物資料集、每日各站進出站人數、車站基本資料集：政府資料開放平臺 data.gov.tw
-- 列車時刻（規劃中）：TDX 運輸資料流通服務平臺 API
+- 列車時刻：TDX 運輸資料流通服務平臺 API（`src/fetch_tdx.py`）
+
+## TDX 時刻表抓取
+1. 在專案根目錄建立 `.env`（參考 `.env.example`），填入 `TDX_CLIENT_ID` / `TDX_CLIENT_SECRET`。
+2. 先確認回傳格式：`python -m src.fetch_tdx --inspect`
+3. 正式抓取並輸出 `data/processed/dim_train.csv`：`python -m src.fetch_tdx`
+   - 使用「定期車次時刻表」近似當年車次路線（已知近似，報告須註明）。
+   - `dim_train.stop_ids` 為停靠站代碼，可對應 `dim_station.sta_code`。
 
 ## 已知限制（誠實揭露）
 - 遺失物約 **63%** 只記到「車次」、不知掉在哪一站；站別遺失率僅用「車站」紀錄計算。
 - 遺失物期間為 2022-01 ~ 2023-07，**2023 僅上半年**，做月份/季節分析時須留意。
-- 價值層級為主觀分類（v1），判準見 `categorize.py`，仍待精修。
-- 低件數車站的離群殘差不穩定，outlier 結論應設件數門檻。
+- 價值層級為主觀分類（見 `categorize.py`，v2，提供細類與大類兩層），仍可再精修。
+- 離群分析已設最低件數門檻（`config.MIN_LOSS_COUNT`，預設 20）以排除低件數雜訊。
+- 資料僅含「被拾獲登記」的物品，無法反映從未被尋獲、或被私自取走的遺失物。
+
+## 主要產出（outputs/figures）
+- `01_loss_rate_outliers.png`：遺失件數 vs 人流，離群站
+- `02_category_value.png`：品類與價值層級分布
+- `03_reverse_logistics.png`：保管站集中度
+- `04_channel_flow.png`：站內 vs 車上遺失的流向（Sankey）
+- `05_loss_rate_map.png` / `.html`：全臺站別遺失率地圖（含互動版）
 
 ## 備註
 本 repo 為個人作品集用途。若用於競賽投稿，請注意投稿文件需匿名，
