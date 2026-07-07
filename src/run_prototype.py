@@ -55,6 +55,10 @@ def main():
     from . import analyze_train
     analyze_train.run_if_available(fact_lost, dim_station)
 
+    # 延伸三件組：可追回性 / 週末人均率 / 保管站=車輛基地
+    from . import analyze_extra
+    analyze_extra.run(fact_lost, fact_ridership)
+
     # 存乾淨資料表（之後可餵給 Tableau）
     fact_lost.to_csv(config.PROCESSED / "fact_lost.csv", index=False, encoding="utf-8-sig")
     # dim_station 併入每站人流，讓 Tableau 能算「某品類在某站的遺失率」
