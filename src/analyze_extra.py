@@ -110,8 +110,53 @@ def fig_depot_keep(fact_lost: pd.DataFrame):
           {n: DEPOT_MAP.get(n, "—") for n in keep.index}, "）")
 
 
+def fig_retention_scenarios(fact_lost: pd.DataFrame):
+    """分級保管期的穩態庫存情境（上界估計：假設無人領回）。
+
+    流入量採臺鐵官方年均拾獲量 8.6 萬件（2026/3 新制報導）；
+    價值構成採本資料集比例（公開招領子集，作為代理）。
+    穩態庫存 ≈ 月流入 × 各級保管月數 加權。
+    法源備註：服務人員拾得之遺留物依鐵路法招領 1 年（修法方能縮短）；
+    民眾拾得依民法 ≤500元 15日 / >500元或無法判斷 6個月。
+    國際對照：日本遺失物法 2007 年起保管 3 個月；倫敦 TfL 亦為 3 個月。
+    """
+    OFFICIAL_YEARLY = 86000
+    monthly = OFFICIAL_YEARLY / 12
+    s = fact_lost["value_tier"].value_counts(normalize=True)
+    s_lo, s_mid, s_hi, s_un = (s.get("低", 0), s.get("中", 0),
+                               s.get("高", 0), s.get("未知", 0))
+    print(f"[extra] 價值構成（資料集）：低 {s_lo*100:.0f}% / 中 {s_mid*100:.0f}% / "
+          f"高 {s_hi*100:.0f}% / 未知 {s_un*100:.0f}%")
+
+    scen = pd.Series({
+        "現制\n(全品項12個月)": monthly * 12,
+        "低價值改3個月\n(其餘12個月)": monthly * (s_lo * 3 + (1 - s_lo) * 12),
+        "分級保管\n(低3/中·未知6/高12)": monthly * (s_lo * 3 + (s_mid + s_un) * 6
+                                            + s_hi * 12),
+    })
+    base = scen.iloc[0]
+    fig, ax = plt.subplots(figsize=(10, 5.5))
+    bars = ax.bar(scen.index, scen.values, color=["#B03A2E", "#2E86C1", "#F08300"])
+    for b, v in zip(bars, scen.values):
+        lab = f"{v/1000:.0f}K件" + ("" if v == base else f"\n↓{(1-v/base)*100:.0f}%")
+        ax.text(b.get_x() + b.get_width() / 2, v, lab, ha="center", va="bottom",
+                fontsize=10)
+    ax.set_title("分級保管期可大幅降低穩態庫存（上界估計，假設無人領回）\n"
+                 "流入量＝官方年均8.6萬件；價值構成＝本資料集比例；縮短保管期涉及修法")
+    ax.set_ylabel("穩態庫存（件）")
+    ax.margins(y=0.18)
+    fig.tight_layout()
+    fig.savefig(config.FIG / "10_retention_scenarios.png", dpi=130)
+    plt.close(fig)
+    for k, v in scen.items():
+        print(f"[extra] {k.replace(chr(10),'')}：{v:,.0f} 件"
+              + ("" if v == base else f"（↓{(1-v/base)*100:.0f}%）"))
+
+
 def run(fact_lost: pd.DataFrame, fact_ridership: pd.DataFrame):
     fig_recoverability(fact_lost)
     fig_weekday_rate(fact_lost, fact_ridership)
     fig_depot_keep(fact_lost)
-    print(f"[extra] 已輸出 07_recoverability / 08_weekday_rate / 09_depot_keep")
+    fig_retention_scenarios(fact_lost)
+    print(f"[extra] 已輸出 07_recoverability / 08_weekday_rate / 09_depot_keep / "
+          f"10_retention_scenarios")
