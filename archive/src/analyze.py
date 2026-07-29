@@ -1,19 +1,12 @@
-"""
-臺鐵遺失物開放資料分析
------------------------
-File: analyze.py
-Name: Ryan Lei
------------------------
-DESCRIPTION: 這個檔案是第四層的分析與畫圖，用來驗證三條分析線走得通。做的事
-情有：
-  1. 遺失率離群分析（拿 lost 對 throughput 做線性迴歸，看殘差，找出掉得異常多
-     或異常少的站）。
-  2. 品類與價值層級的結構。
-  3. 逆物流：保管站集中度，反映領回的摩擦。
-  4. 遺失管道：車上 vs 站內的流向。
-圖都存到 outputs/figures/，表都存到 outputs/tables/。
-"""
+"""第四層（分析指標）+ 圖：驗證三條分析線可行性。
 
+產出：
+  1. 遺失率離群分析（lost ~ throughput 線性迴歸殘差，找出掉得異常多/少的站）
+  2. 品類 / 價值層級結構
+  3. 逆物流：保管站集中度（領回摩擦）
+  4. 遺失管道：車上 vs 站內
+圖存到 outputs/figures/，表存到 outputs/tables/。
+"""
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -26,59 +19,31 @@ from .plotstyle import set_cjk_font
 set_cjk_font()
 
 
-def loss_rate_outliers(agg, min_count=None):
-    """
-    用人流去預測遺失件數，找出偏離趨勢的站（離群）。
-
-    做法是拿 log(throughput) 對 log(lost_count) 做線性迴歸，殘差為正代表這站掉
-    得比人流所預期的還多。迴歸是用「所有有遺失的站」去擬合的，但最後只回報件
-    數達門檻的站，避免件數太少的站變成雜訊。
-
-    Input:
-        agg (DataFrame): 每站彙總表。
-        min_count (int): 回報的最低件數門檻；不給就用 config.MIN_LOSS_COUNT。
-
-    Returns:
-        d (DataFrame): 件數達門檻的站，帶 expected_log、residual 等欄位，
-                       依殘差由大到小排序。
-    """
-    # 沒特別指定門檻就用 config 裡的預設值。
+def loss_rate_outliers(agg: pd.DataFrame, min_count: int = None) -> pd.DataFrame:
+    """用 log(throughput) 對 lost_count 做線性迴歸，殘差為正=掉得比人流預期多。
+    迴歸用所有有遺失的站擬合；但只回報件數達門檻的站，避免低件數雜訊。"""
     if min_count is None:
         min_count = config.MIN_LOSS_COUNT
-    # 只拿有遺失、也有人流的站來擬合。
     d = agg[(agg["lost_count"] > 0) & (agg["throughput_window"] > 0)].copy()
     x = np.log10(d["throughput_window"])
     y = np.log10(d["lost_count"])
-    b, a = np.polyfit(x, y, 1)            # 擬合出 y = b*x + a
+    b, a = np.polyfit(x, y, 1)            # y = b*x + a
     d["expected_log"] = b * x + a
-    # 殘差 = 實際 - 預期。正的代表掉得比預期多。
     d["residual"] = (y - d["expected_log"]).round(3)
     d["fit_b"], d["fit_a"] = b, a
-    # 擬合用全部的站，但只回報件數夠多的站。
     d = d[d["lost_count"] >= min_count]
     return d.sort_values("residual", ascending=False)
 
 
-def fig_loss_scatter(d):
-    """
-    畫遺失件數 vs 人流的散點圖，加上迴歸趨勢線並標出離群站。
-
-    Input:
-        d (DataFrame): loss_rate_outliers 的輸出。
-
-    Output:
-        存 01_loss_rate_outliers.png，沒有回傳值。
-    """
+def fig_loss_scatter(d: pd.DataFrame):
     fig, ax = plt.subplots(figsize=(9, 6))
     ax.scatter(d["throughput_window"], d["lost_count"], s=28, alpha=0.6,
                color="#1D9E75", edgecolor="white", linewidth=0.5)
-    # 把迴歸線畫回原本的線性尺度上（座標軸是 log，所以要 10 的次方還原）。
     xs = np.logspace(np.log10(d["throughput_window"].min()),
                      np.log10(d["throughput_window"].max()), 50)
     b, a = d["fit_b"].iloc[0], d["fit_a"].iloc[0]
     ax.plot(xs, 10 ** (b * np.log10(xs) + a), "--", color="#993C1D",
             lw=1.5, label="迴歸趨勢線")
-    # 標出殘差最大的前 5 站跟最小的後 3 站。
     for _, r in pd.concat([d.head(5), d.tail(3)]).iterrows():
         ax.annotate(r["sta_name"], (r["throughput_window"], r["lost_count"]),
                     fontsize=9, xytext=(4, 3), textcoords="offset points")
@@ -91,22 +56,12 @@ def fig_loss_scatter(d):
     plt.close(fig)
 
 
-def fig_category(fact_lost):
-    """
-    畫兩張並排的圖：左邊品類件數長條、右邊價值層級圓餅。
-
-    Input:
-        fact_lost (DataFrame): 清好的遺失物表。
-
-    Output:
-        存 02_category_value.png，沒有回傳值。
-    """
+def fig_category(fact_lost: pd.DataFrame):
     cat = fact_lost["category"].value_counts()
-    # 價值層級固定照高中低未知的順序排，缺哪一級就跳過。
     tier = fact_lost["value_tier"].value_counts().reindex(["高", "中", "低", "未知"]).dropna()
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
-    # 左圖：品類水平長條，件數由少到多，bar 尾端標上件數。
+    # 左：品類長條，bar 尾端標件數
     cat_sorted = cat.sort_values()
     cat_sorted.plot.barh(ax=ax1, color="#378ADD")
     ax1.set_title("遺失物品類分布"); ax1.set_xlabel("件數")
@@ -114,7 +69,7 @@ def fig_category(fact_lost):
     for i, v in enumerate(cat_sorted.values):
         ax1.text(v, i, f" {v:,}", va="center", fontsize=9)
 
-    # 右圖：價值層級圓餅，每一塊同時顯示件數跟百分比。
+    # 右：價值層級圓餅，顯示件數與比例
     tier_colors = ["#993C1D", "#EF9F27", "#1D9E75", "#888780"][:len(tier)]
     total = tier.sum()
     ax2.pie(tier.values, labels=tier.index, colors=tier_colors, startangle=90,
@@ -126,25 +81,12 @@ def fig_category(fact_lost):
     plt.close(fig)
 
 
-def fig_reverse_logistics(fact_lost, addr2name=None):
-    """
-    畫保管站集中度：遺失物最後被存到哪幾站最多（逆物流／領回摩擦）。
-
-    Input:
-        fact_lost (DataFrame): 清好的遺失物表。
-        addr2name (dict): 保管站地址 -> 站名 的對照；有給就把地址換成站名，
-                          沒給就直接用地址（過長的截斷）。
-
-    Output:
-        存 03_reverse_logistics.png，沒有回傳值。
-    """
+def fig_reverse_logistics(fact_lost: pd.DataFrame, addr2name: dict = None):
     if addr2name:
-        # 有對照表：把保管站地址換成站名再統計前八名。
         names = (fact_lost["keep_addr"].map(lambda a: addr2name.get("".join(str(a).split())))
                  .dropna().value_counts().head(8))
         labels = [f"{n}站" for n in names.index]
     else:
-        # 沒對照表：直接用地址，太長的截斷加省略號。
         names = fact_lost["keep_addr"].replace("", np.nan).dropna().value_counts().head(8)
         labels = [a[:11] + "…" if len(a) > 11 else a for a in names.index]
     keep = names
@@ -162,24 +104,9 @@ def fig_reverse_logistics(fact_lost, addr2name=None):
 
 
 def _bezier_ribbon(ax, x0, y0a, y0b, x1, y1a, y1b, color, alpha=0.55):
-    """
-    畫一條兩端等寬的流向緞帶，給 Sankey 用。
-
-    上下兩條邊各是一條三次貝茲曲線，中間灌滿顏色，看起來就像一條從左流到右
-    的帶子。
-
-    Input:
-        ax: 要畫上去的 matplotlib 座標軸。
-        x0, y0a, y0b: 左端的 x、上緣 y、下緣 y。
-        x1, y1a, y1b: 右端的 x、上緣 y、下緣 y。
-        color, alpha: 顏色跟透明度。
-
-    Output:
-        直接把緞帶畫在 ax 上，沒有回傳值。
-    """
+    """畫一條兩端等寬的流向緞帶（上下邊各一條三次貝茲曲線）。"""
     from matplotlib.path import Path
     import matplotlib.patches as patches
-    # 控制點放在左右端點的中間 x，讓曲線平滑地過渡。
     mx = (x0 + x1) / 2
     verts = [(x0, y0a), (mx, y0a), (mx, y1a), (x1, y1a),
              (x1, y1b), (mx, y1b), (mx, y0b), (x0, y0b), (x0, y0a)]
@@ -189,37 +116,24 @@ def _bezier_ribbon(ax, x0, y0a, y0b, x1, y1a, y1b, color, alpha=0.55):
                                    edgecolor="none", alpha=alpha))
 
 
-def fig_channel_flow(fact_lost, addr2name, top_n=5):
-    """
-    畫 Sankey 流向圖：站內遺失／車上遺失 分別流到最終的保管站，帶子寬度=件數。
-
-    Input:
-        fact_lost (DataFrame): 清好的遺失物表。
-        addr2name (dict): 保管站地址 -> 站名 的對照。
-        top_n (int): 保管站只畫前幾名，其餘併成「其他/分散」。
-
-    Output:
-        存 04_channel_flow.png，沒有回傳值。
-    """
+def fig_channel_flow(fact_lost: pd.DataFrame, addr2name: dict, top_n=5):
+    """Sankey：站內遺失 / 車上遺失  ->  最終保管站。寬度=件數。"""
     df = fact_lost.copy()
     df["keep_name"] = df["keep_addr"].map(lambda a: addr2name.get("".join(str(a).split())))
-    # 只看能對到保管站站名、而且管道是車站或車次的。
     df = df[df["channel"].isin(["車站", "車次"]) & df["keep_name"].notna()]
     src_label = {"車站": "站內遺失", "車次": "車上遺失"}
 
-    # 保管站取前 top_n 名，其餘一律歸到「其他/分散」。
     dests = list(df["keep_name"].value_counts().head(top_n).index)
     def dkey(n): return n if n in dests else "其他/分散"
     df["dest"] = df["keep_name"].map(dkey)
     dest_order = dests + ["其他/分散"]
 
-    # 算每一組（來源, 目的）的件數，之後決定每條帶子的寬度。
     flows = df.groupby(["channel", "dest"]).size().reset_index(name="n")
     sources = ["車站", "車次"]
     total = len(df)
     gap = total * 0.04
 
-    # 左右兩排節點各自要垂直堆疊，先算出每個節點佔的高度區間。
+    # 左右節點的垂直堆疊位置
     src_sizes = df["channel"].value_counts().reindex(sources)
     dst_sizes = df["dest"].value_counts().reindex(dest_order)
 
@@ -236,7 +150,7 @@ def fig_channel_flow(fact_lost, addr2name, top_n=5):
 
     fig, ax = plt.subplots(figsize=(11, 7))
     x0, x1, w = 0.0, 1.0, 0.05
-    # 用游標記錄每個節點目前畫到哪個高度，帶子一條一條往下疊。
+    # 各節點內部依 dest 順序分配緞帶起訖位置
     s_cursor = {s: spos[s][0] for s in sources}
     d_cursor = {d: dpos[d][0] for d in dest_order}
     for s in sources:
@@ -248,7 +162,7 @@ def fig_channel_flow(fact_lost, addr2name, top_n=5):
             y0a = s_cursor[s]; y0b = y0a + n; s_cursor[s] = y0b
             y1a = d_cursor[d]; y1b = y1a + n; d_cursor[d] = y1b
             _bezier_ribbon(ax, x0 + w, y0a, y0b, x1, y1a, y1b, dcolor[d])
-    # 左右兩排的節點方塊，加上文字標籤。
+    # 節點長條
     import matplotlib.patches as patches
     for s in sources:
         y0, y1 = spos[s]
@@ -269,18 +183,6 @@ def fig_channel_flow(fact_lost, addr2name, top_n=5):
 
 
 def summary(fact_lost, agg, outliers):
-    """
-    把幾個關鍵結果整理成一段文字，印在終端機也存成 txt。
-
-    Input:
-        fact_lost (DataFrame): 清好的遺失物表。
-        agg (DataFrame): 每站彙總表。
-        outliers (DataFrame): loss_rate_outliers 的輸出。
-
-    Output:
-        印摘要並存 prototype_summary.txt，沒有回傳值。
-    """
-    # 用一個 list 收每一行，最後一次 join 起來，比一直字串相加乾淨。
     lines = []
     P = lines.append
     P("=" * 60); P("PROTOTYPE 結果摘要"); P("=" * 60)

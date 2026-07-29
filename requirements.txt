@@ -1,4 +1,10 @@
+# 資料處理與繪圖（本專案核心相依）
 pandas>=2.0
 numpy>=1.24
 matplotlib>=3.7
-folium>=0.16   # 互動地圖（可選）
+
+# 互動地圖（可選；map_viz.py 的 interactive_map）
+folium>=0.16
+
+# 註：TDX 抓取（fetch_tdx.py）使用 Python 內建 urllib，不需額外套件。
+#     Tableau 儀表板另於 Tableau Public 製作，非 Python 相依。

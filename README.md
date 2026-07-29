@@ -1,79 +1,70 @@
-# 臺鐵遺失物營運分析 — Prototype
+# 臺鐵遺失物開放資料分析
 
-> TRA Lost-Property Operational Analysis. Linking ~24k lost-item records (2022–2023) with
-> daily station ridership and the station master to surface where items are lost, what is lost,
-> and the "reclaim friction" created by centralised storage. Python data pipeline; Tableau for the final viz.
-
-本專案以臺鐵公開資料，分析「遺失物」的營運樣態。這是 prototype 階段，用來驗證資料能否
-串接、分析方向是否成立。
-
-## 分析三條主線
-1. **遺失率與離群站**：以 `每萬人次遺失件數` 正規化，找出「掉得比人流預期多/少」的車站。
-2. **品類與價值側寫**：遺失物以關鍵字分類，並標註價值層級與是否可追回失主。
-3. **逆物流 / 領回摩擦**：遺失物最終集中保管的地點 vs 實際遺失地點。
-
-## 資料管線架構（程式依此分層）
-```
-來源        遺失物XML │ 進出站CSV(2022-23) │ 車站基本資料JSON │ TDX時刻表API(待接)
-              │              │                  │
-解析清理   parse_lost_property / parse_ridership  ── 站碼補零、車次/車站拆分、品類標註
-              │
-核心表      dim_station │ fact_lost │ fact_ridership   (build_tables)
-              │
-分析指標    遺失率離群 │ 品類價值 │ 逆物流            (analyze)
-              │
-呈現        Tableau（讀 data/processed 的乾淨表）
-```
-
-## 專案結構
-```
-src/
-  config.py              路徑與分析期間常數
-  categorize.py          ★ 品類/價值/可追回 分類規則（分析核心，需人工檢視）
-  parse_lost_property.py 遺失物 XML -> fact_lost
-  parse_ridership.py     人流 CSV -> fact_ridership；車站 JSON -> dim_station
-  build_tables.py        組 agg_station（含方法論護欄）
-  analyze.py             分析指標 + 產圖
-  run_prototype.py       主程式（串起整條管線）
-data/raw/                原始資料（.gitignore，需自行放入）
-data/processed/          產出的乾淨表（.gitignore，可重建）
-outputs/figures/         分析圖
-outputs/tables/          分析表
-```
-
-## 執行方式
-```bash
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-# 把四份原始資料放進 data/raw/，檔名見 config.py
-python -m src.run_prototype
-```
+以臺鐵三項政府開放資料與 TDX 列車時刻，建立可重複執行的資料管線，分析遺失物
+「掉在哪、掉了什麼、如何流動、為何難以領回」，並提出低成本的管理改善建議。
 
 ## 資料來源
-- 遺失物資料集、每日各站進出站人數、車站基本資料集：政府資料開放平臺 data.gov.tw
-- 列車時刻：TDX 運輸資料流通服務平臺 API（`src/fetch_tdx.py`）
+- 遺失物資料集、每日各站進出站人數、車站基本資料集（政府資料開放平臺 data.gov.tw）
+- 列車時刻：TDX 運輸資料流通服務平臺 API
 
-## TDX 時刻表抓取
-1. 在專案根目錄建立 `.env`（參考 `.env.example`），填入 `TDX_CLIENT_ID` / `TDX_CLIENT_SECRET`。
-2. 先確認回傳格式：`python -m src.fetch_tdx --inspect`
-3. 正式抓取並輸出 `data/processed/dim_train.csv`：`python -m src.fetch_tdx`
-   - 使用「定期車次時刻表」近似當年車次路線（已知近似，報告須註明）。
-   - `dim_train.stop_ids` 為停靠站代碼，可對應 `dim_station.sta_code`。
+## 環境需求
+- Python 3.10+
+- `pip install -r requirements.txt`
 
-## 已知限制（誠實揭露）
-- 遺失物約 **63%** 只記到「車次」、不知掉在哪一站；站別遺失率僅用「車站」紀錄計算。
-- 遺失物期間為 2022-01 ~ 2023-07，**2023 僅上半年**，做月份/季節分析時須留意。
-- 價值層級為主觀分類（見 `categorize.py`，v2，提供細類與大類兩層），仍可再精修。
-- 離群分析已設最低件數門檻（`config.MIN_LOSS_COUNT`，預設 20）以排除低件數雜訊。
-- 資料僅含「被拾獲登記」的物品，無法反映從未被尋獲、或被私自取走的遺失物。
+## 資料放置（原始資料不入庫，需自行下載）
+將四個原始檔放入 `data/raw/`（因 `.gitignore` 排除，故 clone 後需自行放置）：
+- `遺失物資料集.xml`
+- `車站基本資料集.json`
+- `每日各站進出站人數2022.csv`、`每日各站進出站人數2023.csv`
 
-## 主要產出（outputs/figures）
-- `01_loss_rate_outliers.png`：遺失件數 vs 人流，離群站
-- `02_category_value.png`：品類與價值層級分布
-- `03_reverse_logistics.png`：保管站集中度
-- `04_channel_flow.png`：站內 vs 車上遺失的流向（Sankey）
-- `05_loss_rate_map.png` / `.html`：全臺站別遺失率地圖（含互動版）
+TDX 金鑰請放專案根目錄 `.env`（格式見 `.env.example`）：
+```
+TDX_CLIENT_ID=你的ID
+TDX_CLIENT_SECRET=你的SECRET
+```
 
-## 備註
-本 repo 為個人作品集用途。若用於競賽投稿，請注意投稿文件需匿名，
-**勿將含個人資訊的本 repo 連結放入投稿 PDF**。
+## 執行流程
+```bash
+# (選) 先抓 TDX 列車時刻，產生 data/processed/dim_train.csv
+python -m src.fetch_tdx
+
+# 主流程：清理→建表→產出各分析表與圖 01–10
+python -m src.run_prototype
+
+# (選) 分類規則人工抽樣稽核
+python -m src.audit_sample          # 產生 100 件樣本
+python -m src.audit_sample --score  # 填完 Y/N 後計算正確率
+```
+
+## 程式模組
+| 模組 | 說明 |
+|---|---|
+| `config.py` | 路徑與參數（含離群門檻 `MIN_LOSS_COUNT`） |
+| `parse_lost_property.py` | 解析遺失物 XML、車站/車次拆分、品類分類、保管站名 → `fact_lost` |
+| `parse_ridership.py` | 站碼補零、人流彙總、北中南東區域劃分 → `dim_station`、`fact_ridership` |
+| `categorize.py` | 品名關鍵字分類（16 類＋其他）、價值層級、可追回性（規則 v3） |
+| `build_tables.py` | 每十萬人次遺失率、對數迴歸離群殘差、高價值佔比 → `agg_station` |
+| `fetch_tdx.py` | TDX 定期時刻表 → 車次/車種/停靠站 `dim_train` |
+| `analyze.py` | 圖1 離群、圖2 品類價值、圖4 流向（Sankey） |
+| `map_viz.py` | 圖3 全臺遺失率地圖（靜態 PNG ＋ 互動 HTML） |
+| `analyze_train.py` | 車上遺失：車種、終點站→保管站 三情境逆物流 → 圖6 |
+| `analyze_extra.py` | 圖5 保管站=車輛基地、圖7 可追回性、圖8 週末人均率、圖9 分級保管情境 |
+| `audit_sample.py` | 分類規則人工抽樣稽核工具 |
+| `plotstyle.py` | 跨平台中文字型自動偵測 |
+| `run_prototype.py` | 主流程，串接整條管線 |
+
+## 產出圖表（outputs/figures）
+01 離群分析、02 品類與價值、03 逆物流（保管站集中度，舊版）、04 流向 Sankey、
+05 地圖、06 車種與三情境逆物流、07 可追回性、08 週末人均率、
+09 保管站=車輛基地、10 分級保管情境。
+
+## 已知限制
+- 本資料集為「公開招領子集」（18 個月 23,903 件，約官方年拾獲 7.3–9 萬件之兩成），總量以官方統計為準。
+- 車上遺失約 63% 僅記錄車次、無中途交付站；逆物流以「終點站」為清出點，屬上界估計。
+- 距離以直線（Haversine）計算，東部因中央山脈阻隔遭低估。
+- 品類與價值為規則式判定，具主觀性，另以抽樣稽核控管。
+- 缺乏「領回結果」資料，領回相關推論以結構與國際經驗為主。
+
+## 隱私與匿名
+`.env`（金鑰）與 `data/`（原始與中繼資料）均已被 `.gitignore` 排除、不入庫。
+本 repo 為個人作品集用途；若用於競賽投稿，投稿文件須匿名，勿放入個人 GitHub/Tableau 連結。
