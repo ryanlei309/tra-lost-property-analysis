@@ -2,7 +2,6 @@
 臺鐵遺失物開放資料分析
 -----------------------
 File: plotstyle.py
-Name: Ryan Lei
 -----------------------
 DESCRIPTION: 這個檔案專門處理 matplotlib 畫中文會變成一堆豆腐方框的問題。
 不同作業系統內建的中文字型名字都不一樣（Mac、Windows、Linux 各一套），所以

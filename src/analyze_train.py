@@ -2,7 +2,6 @@
 臺鐵遺失物開放資料分析
 -----------------------
 File: analyze_train.py
-Name: Ryan Lei
 -----------------------
 DESCRIPTION: 這個檔案專門分析「車上遺失」，前提是要先有 TDX 抓下來的
 dim_train.csv。做三件事：
